@@ -1,0 +1,131 @@
+{
+    "elements": [{
+        "name": "Typography",
+        "items": [{
+                "name": "Page header",
+                "icon": "fa fa-header",
+                "content": "elements/page-header.html"
+            }, {
+                "name": "Heading",
+                "icon": "fa fa-header",
+                "content": "elements/heading.html"
+            }, {
+                "name": "paragraph",
+                "icon": "fa fa-paragraph",
+                "content": "elements/paragraph.html"
+            }, {
+                "name": "Image left text",
+                "icon": "fa fa-align-left ",
+                "content": "elements/image-left-text.html"
+            }, {
+                "name": "2 column text",
+                "icon": "fa fa-columns",
+                "content": "elements/2-column-text.html"
+            }, {
+                "name": "Image right text",
+                "icon": "fa fa-align-right",
+                "content": "elements/image-right-text.html"
+            },
+            {
+                "name": "unordered list",
+                "icon": "fa fa-list-ul",
+                "content": "elements/unordered-list.html"
+            }, {
+                "name": "ordered list",
+                "icon": "fa fa-list-ol",
+                "content": "elements/ordered-list.html"
+            }, {
+                "name": "jumbotron",
+                "icon": "fa fa-header",
+                "content": "elements/jumbotron.html"
+            }, {
+                "name": "features",
+                "icon": "fa fa-certificate",
+                "content": "elements/features.html"
+            }, {
+                "name": "Service List",
+                "icon": "fa fa-life-ring",
+                "content": "elements/service-list.html"
+            }, {
+                "name": "Price table",
+                "icon": "fa fa-usd",
+                "content": "elements/price-table.html"
+            }
+        ]
+    }, {
+        "name": "Media",
+        "items": [{
+            "name": "Image",
+            "icon": "fa fa-picture-o",
+            "content": "elements/image-full.html"
+        }, {
+            "name": "2 Image",
+            "icon": "fa fa-columns",
+            "content": "elements/image-2-column.html"
+        }, {
+            "name": "Video",
+            "icon": "fa fa-video-camera",
+            "content": "elements/video.html"
+        }]
+    }, {
+        "name": "Layout",
+        "items": [{
+            "name": "Divider",
+            "icon": "fa fa-minus",
+            "content": "elements/divider.html"
+        }, {
+            "name": "Divider (dotted)",
+            "icon": "fa fa-minus",
+            "content": "elements/divider-dotted.html"
+        }, {
+            "name": "Divider (dashed)",
+            "icon": "fa fa-minus",
+            "content": "elements/divider-dashed.html"
+        }, {
+            "name": "View in browser",
+            "icon": "fa fa-globe",
+            "content": "elements/view-browser.html"
+        }]
+    }, {
+        "name": "Button",
+        "items": [{
+            "name": "Button",
+            "icon": "fa fa-square-o",
+            "content": "elements/button-1.html"
+        }, {
+            "name": "2 Button ",
+            "icon": "fa fa-square-o",
+            "content": "elements/button-2.html"
+        }, {
+            "name": "3 Button ",
+            "icon": "fa fa-square-o",
+            "content": "elements/button-3.html"
+        }]
+    }, {
+        "name": "Social",
+        "items": [{
+            "name": "Social links 1",
+            "icon": "fa fa-share-square-o",
+            "content": "elements/social-1.html"
+        }, {
+            "name": "Social links 2",
+            "icon": "fa fa-share",
+            "content": "elements/social-2.html"
+        }, {
+            "name": "Social links 3",
+            "icon": "fa fa-share-square",
+            "content": "elements/social-3.html"
+        }]
+    }, {
+        "name": "Footer",
+        "items": [{
+            "name": "Adress",
+            "icon": "fa fa-minus",
+            "content": "elements/address.html"
+        }, {
+            "name": "Adress with Logo",
+            "icon": "fa fa-minus",
+            "content": "elements/address-logo.html"
+        }]
+    }]
+}

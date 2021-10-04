@@ -1,0 +1,5280 @@
+@font-face {
+    font-family: Montserrat-Regular;
+    src: url('../fonts/montserrat/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: norwester;
+    src: url('../fonts/norwester/norwester.otf');
+}
+
+
+body {
+    /* background: url("../img/banners/banner1.mp4"); */
+    /* background-repeat: no-repeat; */
+    /* background-size: 100%; */
+    color: #444;
+    font-family: "Montserrat-Regular", sans-serif;
+    background: #0b004b;
+}
+
+a {
+    color: #212529;
+    transition: 0.5s;
+}
+
+a:hover,
+a:active,
+a:focus {
+    color: #0a98c0;
+    outline: none;
+    text-decoration: none;
+}
+
+p {
+    padding: 0;
+    margin: 0 0 30px 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    margin: 0 0 20px 0;
+    padding: 0;
+}
+
+/* Back to top button */
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    background: #1bb1dc;
+    color: #fff;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    line-height: 1;
+    font-size: 16px;
+    border-radius: 50%;
+    right: 15px;
+    bottom: 15px;
+    transition: background 0.5s;
+    z-index: 11;
+}
+
+.back-to-top i {
+    padding-top: 12px;
+    color: #fff;
+}
+
+/* Prelaoder */
+
+#preloader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 9999;
+    background-size: 50px 50px;
+    animation: animateBg forwards 1s ease-in;
+    background: url(../img/Pirates/loader1.gif) center no-repeat red;
+
+}
+
+/* #preloader:before {
+  content: "";
+  position: fixed;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  border: 6px solid #f2f2f2;
+  border-top: 6px solid #1bb1dc;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: animate-preloader 1s linear infinite;
+  animation: animate-preloader 1s linear infinite;
+} */
+
+@-webkit-keyframes animate-preloader {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate-preloader {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+/*----------header------------*/
+#particle {
+    width: 90%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+}
+
+#header {
+    height: 50px;
+    transition: all 0.5s;
+    z-index: 997;
+    transition: all 0.5s;
+    padding: 20px 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    transition: all 0.5s;
+    z-index: 997;
+    background: #da1f15;
+}
+
+#svgelem {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-20%);
+    -ms-transform: translateX(-20%);
+    transform: translateX(-20%);
+    z-index: -1;
+    top: 0;
+}
+
+.landing-logo-img {
+    margin-top: -16px;
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+
+/* Desktop Navigation */
+.logo-img {
+    position: absolute;
+    /* top: 9px; */
+    left: 48%;
+    margin-left: -60px;
+    z-index: 20;
+}
+
+.header-content {
+    max-width: 1350px;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 auto;
+}
+
+.main-nav {
+    /*position: absolute;
+    right: 300px;
+    top: 4px;*/
+    width: 50%;
+}
+
+.main-nav,
+.main-nav * {
+    /* margin: 0; */
+    padding: 0;
+    list-style: none;
+}
+
+.main-nav:last-of-type {
+    padding-left: 180px;
+}
+
+.main-nav:first-of-type {
+    padding-right: 79px;
+    padding-left: 180px;
+}
+
+.left-menu,
+.right-menu {
+    margin-top: -16px;
+}
+
+.main-nav-first,
+.main-nav-first * {
+    /* margin: 0; */
+    padding: 0;
+    list-style: none;
+}
+
+.main-nav>ul>li {
+    position: relative;
+    white-space: nowrap;
+    float: left;
+}
+
+.main-nav-first>ul>li {
+    position: relative;
+    white-space: nowrap;
+    float: left;
+}
+
+.single-menu-left li a img {
+    margin-right: 5px;
+    margin-bottom: 3px;
+}
+
+.single-menu-right li a img {
+    margin-right: 5px;
+    margin-bottom: 3px;
+}
+
+.main-nav a {
+    display: block;
+    position: relative;
+    color: #fff;
+    padding: 10px 15px;
+    transition: 0.3s;
+    font-size: .8vw;
+    font-family: "Open Sans", sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.main-nav-first a {
+    display: block;
+    position: relative;
+    color: #fff;
+    padding: 10px 15px;
+    transition: 0.3s;
+    font-size: .8vw;
+    font-family: "Open Sans", sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.main-nav a:hover,
+.main-nav .active>a,
+.main-nav li:hover>a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.main-nav .drop-down ul {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: calc(100% - 30px);
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    padding: 10px 0;
+    background: #fff;
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    transition: ease all 0.3s;
+}
+
+.main-nav .drop-down:hover>ul {
+    opacity: 1;
+    top: 100%;
+    visibility: visible;
+}
+
+.main-nav .drop-down li {
+    min-width: 180px;
+    position: relative;
+}
+
+.main-nav .drop-down ul a {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: none;
+    color: #da2015;
+}
+
+.main-nav .drop-down ul a:hover,
+.main-nav .drop-down ul .active>a,
+.main-nav .drop-down ul li:hover>a {
+    color: #1c4184;
+}
+
+.main-nav .drop-down>a:after {
+    content: "\f107";
+    font-family: FontAwesome;
+    padding-left: 10px;
+}
+
+.main-nav .drop-down .drop-down ul {
+    top: 0;
+    left: calc(100% - 30px);
+}
+
+.main-nav .drop-down .drop-down:hover>ul {
+    opacity: 1;
+    top: 0;
+    left: 100%;
+}
+
+.main-nav .drop-down .drop-down>a {
+    padding-right: 35px;
+}
+
+.main-nav .drop-down .drop-down>a:after {
+    content: "\f105";
+    position: absolute;
+    right: 15px;
+}
+
+/* Mobile Navigation */
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 9999;
+    overflow-y: auto;
+    left: -260px;
+    width: 260px;
+    padding-top: 18px;
+    background: rgba(40, 38, 70, 0.8);
+    transition: 0.4s;
+}
+
+.mobile-nav * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.mobile-nav a {
+    display: block;
+    position: relative;
+    color: #fff;
+    padding: 10px 20px;
+    font-weight: 500;
+}
+
+.mobile-nav a:hover,
+.mobile-nav .active>a,
+.mobile-nav li:hover>a {
+    color: #8dc2fa;
+    text-decoration: none;
+}
+
+.mobile-nav .drop-down>a:after {
+    content: "\f078";
+    font-family: FontAwesome;
+    padding-left: 10px;
+    position: absolute;
+    right: 15px;
+}
+
+.mobile-nav .active.drop-down>a:after {
+    content: "\f077";
+}
+
+.mobile-nav .drop-down>a {
+    padding-right: 35px;
+}
+
+.mobile-nav .drop-down ul {
+    display: none;
+    overflow: hidden;
+}
+
+.mobile-nav .drop-down li {
+    padding-left: 20px;
+}
+
+.mobile-nav-toggle {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 9998;
+    border: 0;
+    background: none;
+    font-size: 24px;
+    transition: all 0.4s;
+    outline: none !important;
+    line-height: 1;
+    cursor: pointer;
+    text-align: right;
+}
+
+.mobile-nav-toggle i {
+    margin: 18px 18px 0 0;
+    color: #065e77;
+}
+
+.mobile-nav-overly {
+    width: 100%;
+    height: 100%;
+    z-index: 9997;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: rgba(40, 38, 70, 0.8);
+    overflow: hidden;
+    display: none;
+}
+
+.mobile-nav-active {
+    overflow: hidden;
+}
+
+.mobile-nav-active .mobile-nav {
+    left: 0;
+}
+
+.mobile-nav-active .mobile-nav-toggle i {
+    color: #fff;
+}
+
+.playgif {
+    animation-iteration-count: 1;
+}
+
+/*--------------------------------------------------------------
+# Slider Section
+--------------------------------------------------------------*/
+video {
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    /* The following will size the video to fit the full container. Not necessary, just nice.*/
+    min-width: 100%;
+    min-height: 100%;
+    -webkit-transform: translate(-50%, -54%);
+    -moz-transform: translate(-50%, -54%);
+    -ms-transform: translate(-50%, -54%);
+    transform: translate(-50%, -54%);
+    z-index: 0;
+    width: 100%;
+}
+
+#slider-section {
+    position: relative;
+    padding-top: 30%;
+}
+
+#slider-section .slider-img {
+    width: 100%;
+}
+
+#carouselContent {
+    position: absolute;
+    top: 120px;
+    left: 0;
+    right: 0;
+}
+
+.carousel-item {
+    padding: 1.4em;
+}
+
+#carouselContent .carousel-item h2 {
+    font-weight: bold;
+    font-family: norwester;
+    font-size: 2.2vw;
+    color: #000;
+    float: left;
+}
+
+#carouselContent .carousel-item p {
+    font-weight: bold;
+    font-family: Montserrat-Regular;
+    color: #000;
+    font-size: 1vw;
+    float: left;
+}
+
+.casino-btn {
+    background: #da2015;
+    color: #fff;
+    position: absolute;
+    left: 15px;
+    bottom: -20px;
+    border-radius: 50px;
+    padding: 7px 22px;
+    font-size: 1vw;
+    text-decoration: none;
+    border: #da2015;
+}
+
+.logo-icon-img {
+    width: 300px;
+}
+
+#carouselContentMobile {
+    position: absolute;
+    top: -6px;
+    left: 0;
+    right: 0;
+}
+
+#carouselContentMobile .carousel-item {
+    padding-left: 10px;
+}
+
+#carouselContentMobile .carousel-item h2 {
+    font-weight: bold;
+    font-family: norwester;
+    font-size: 2.2vw;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+#carouselContentMobile .carousel-item p {
+    font-weight: bold;
+    font-family: Montserrat-Regular;
+    color: #000;
+    font-size: 7px;
+}
+
+#carouselContentMobile .content-left {
+    position: relative;
+    width: 50%;
+    float: left;
+    left: 33%;
+}
+
+#carouselContentMobile .content-right {
+    width: 20%;
+    float: right;
+}
+
+#carouselContentMobile .casino-btn {
+    background: #da2015;
+    color: #fff;
+    position: absolute;
+    left: 30px;
+    bottom: 10px;
+    border-radius: 50px;
+    padding: 2px 17px;
+    font-size: 10px;
+    text-decoration: none;
+    border: #da2015;
+}
+
+/*--------------------------------------------------------------
+# Rating Section
+--------------------------------------------------------------*/
+#rating-section {
+    /* background-color: #6f482b; */
+    position: relative;
+    background: url('../img/background/water-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+}
+
+#waterfall {
+    margin: 0 auto;
+    width: 20%;
+    position: absolute;
+    left: 9%;
+    height: 125%;
+}
+
+.waterfall {
+    position: static;
+    height: 100%;
+    /* background-image: url(../img/rating/water-bg.png); */
+    background-repeat: no-repeat;
+    padding-left: 72px;
+    margin-left: 200px;
+}
+
+.waterfall>div {
+    position: absolute;
+}
+
+.waterfall-loop {
+    position: absolute;
+    left: 6%;
+    top: 0px;
+    width: 14%;
+    height: 100%;
+    background: url(../img/rating/water-fall.png);
+    background-attachment: fixed;
+    -moz-animation: waterfallloop 5s infinite linear;
+    -webkit-animation: waterfallloop 5s infinite linear;
+    -ms-animation: waterfallloop 5s infinite linear;
+    -o-animation: waterfallloop 5s infinite linear;
+}
+
+
+@-moz-keyframes waterfallloop {
+    0% {
+        background-position: 0 0;
+    }
+
+    /* the end position y must equal bitmap's height */
+    100% {
+        background-position: 0 1112px;
+    }
+}
+
+@-webkit-keyframes waterfallloop {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 0 1112px;
+    }
+}
+
+@-ms-keyframes waterfallloop {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 0 1112px;
+    }
+}
+
+@-o-keyframes waterfallloop {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 0 1112px;
+    }
+}
+
+#rating-section .rating-headings .table-header {
+    background: #2495D7;
+    color: #fff;
+
+    border-radius: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#rating-section .rating-headings .table-header span {
+    font-family: Montserrat-Regular;
+    font-size: 24px;
+    padding-left: 70px;
+    padding-right: 50px;
+}
+
+.table {
+    border-collapse: collapse;
+    border-radius: 40px;
+    /* overflow: hidden; */
+}
+
+.table tr:nth-child(odd) {
+    background-color: #663332;
+}
+
+.table tr:nth-child(even) {
+    background-color: #452526;
+}
+
+.checked {
+    color: orange;
+}
+
+.btn {
+    border-radius: 50px;
+    padding: 7px 22px;
+    font-size: 18px;
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    display: inline-block;
+}
+
+.btn:active {
+    transform: translate(0px, 5px);
+    -webkit-transform: translate(0px, 5px);
+    box-shadow: 0px 1px 0px 0px;
+}
+
+.blue {
+    background-color: #00CCFF;
+    box-shadow: 0px 5px 0px 0px #00CCFF;
+}
+
+.blue:hover {
+    background-color: #3f9ad5;
+    box-shadow: 0px 5px 0px 0px #3f9ad5;
+    color: #fff;
+}
+
+.serial_no {
+    color: #fff;
+    font-size: 20px;
+    display: table-cell;
+    vertical-align: middle;
+    transform: translate(8%, 50%);
+}
+
+.note {
+    position: relative;
+}
+
+.rating-headings {
+    margin-bottom: 70px;
+}
+
+.top-casino-heading {
+    font-weight: bold;
+    font-family: norwester;
+    font-size: 40px;
+    color: #2b1708;
+    text-align: center;
+}
+
+.top-casino-heading span {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.note:after {
+    content: "";
+    position: absolute;
+    top: -25px;
+    right: -29px;
+    width: 25px;
+    height: 59px;
+    display: block;
+    border-top: 20px solid transparent;
+    border-right: 20px solid #3D1D1E;
+    transform: rotate(45deg);
+    border-width: 50px;
+}
+
+.table thead tr {
+    background: #2495D7;
+    border-radius: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.table tr th {
+    color: #fff;
+    font-family: Montserrat-Regular;
+    font-size: 18px;
+}
+
+.table td {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    vertical-align: middle !important;
+}
+
+.table td img {
+    width: 150px;
+    border-radius: 5px;
+
+}
+
+.table td:nth-child(1) {
+    padding: 30px 20px 30px 15px;
+}
+
+.table td:nth-child(2) {
+    background-color: #3D1D1E;
+    padding: 30px;
+}
+
+.table h6 {
+    color: #fdcf00;
+    margin: 0px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.table p {
+    color: #fff;
+    margin: 0px;
+    font-size: 16px;
+}
+
+.table .bonus-span {
+    color: #fff;
+    margin: 0px;
+    font-size: 16px;
+}
+
+.table .add-review-btn {
+    color: #fff;
+    margin: 0px;
+    font-size: 16px;
+    background: teal;
+    border-radius: 5px;
+    padding: 0;
+    width: 120px;
+}
+
+.table p a {
+    color: #fff;
+    font-size: 14px;
+}
+
+.view-btn {
+    margin-top: 50px;
+    background: #3a32b9;
+    border-color: #3a32b9;
+    margin-bottom: 80px;
+}
+
+/*---mobile rating ----*/
+#rating-section-mobile {
+    background-color: #6f482b;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+}
+
+.rating-mobile .rating-headings {
+    margin-top: 78px;
+    margin-bottom: 10px;
+}
+
+.rating-mobile .rating-headings .top-casino-heading img {
+    width: 40px;
+}
+
+.rating-mobile .rating-mobile-collapsed {
+    margin-bottom: 20px;
+}
+
+.rating-mobile .rating-mobile-collapsed:last-child {
+    margin-bottom: 70px;
+}
+
+.rating-mobile .rating-mobile-area {
+    padding: 10px;
+    background: linear-gradient(90deg, #663332 70%, #452526 30%);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.rating-mobile .rating-mobile-area .rating-img {
+    float: left;
+    display: table;
+    width: 30%;
+}
+
+.rating-mobile .rating-mobile-area .rating-img span {
+    color: #fff;
+    font-size: 15px;
+    padding-right: 10px;
+    position: relative;
+    top: 20px;
+    bottom: 10px;
+    margin: auto;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.rating-mobile .rating-mobile-area .rating-img img {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    position: relative;
+    top: 25%;
+    transform: translateY(25%);
+}
+
+.rating-mobile .rating-mobile-area .rating-mobile-content {
+    display: inline-block;
+    margin-left: 10px;
+    width: 28%;
+}
+
+.rating-mobile .rating-mobile-area .rating-mobile-content h6 {
+    color: #DBAF16;
+    font-weight: 600;
+    margin-bottom: 0px;
+    font-size: 13px;
+}
+
+.rating-mobile .rating-mobile-area .rating-mobile-content p {
+    color: #fff;
+    margin-bottom: 0px;
+    font-size: 13px;
+}
+
+.rating-mobile .rating-mobile-area .rating-mobile-content .bonus-span {
+    color: #fff;
+    margin-bottom: 0px;
+    font-size: 13px;
+}
+
+.rating-mobile .rating-mobile-area .rating-mobile-content .add-review-btn {
+    color: #fff;
+    margin: 0px;
+    font-size: 13px;
+    background: teal;
+    border-radius: 5px;
+    padding: 4px;
+}
+
+.rating-mobile .rating-mobile-area .rating-mobile-btn {
+    float: right;
+    width: 25%;
+}
+
+.rating-mobile .rating-mobile-area .rating-mobile-btn .btn-play {
+    border-radius: 50px;
+    padding: 7px 12px;
+    font-size: 18px;
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.rating-mobile .rating-mobile-area .rating-mobile-btn .btn-play span {
+    font-size: 14px;
+}
+
+.rating-mobile .rating-mobile-area .rating-mobile-btn .fa {
+    font-size: 40px;
+}
+
+.rating-mobile-area:after {
+    font-family: 'FontAwesome';
+    content: "\f106";
+    position: relative;
+    top: 23px;
+    right: 5px;
+    background: #452525;
+    border-radius: 50%;
+    padding: 9px;
+    color: #fff;
+}
+
+.rating-mobile-area.collapsed:after {
+    content: "\f107";
+    position: relative;
+    top: 23px;
+    right: 5px;
+    background: #452525;
+    border-radius: 50%;
+    padding: 9px;
+    color: #fff;
+    z-index: 1;
+}
+
+.rating-mobile .other-description {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #663332;
+    width: 100%;
+    overflow: visible;
+    height: 100%;
+}
+
+.rating-mobile .other-description p {
+    color: #fff;
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+.rating-mobile .other-description p a {
+    color: #fff;
+    font-size: 13px;
+    margin-bottom: 0px;
+}
+
+.rating-mobile hr {
+    border-top: 1px solid rgba(0, 0, 0, 0.86) !important;
+}
+
+/*--------------------------------------------------------------
+# About Section
+--------------------------------------------------------------*/
+.DarkWaves {
+    animation: darkwaves 1.8s infinite;
+    /*animation: seamove 7.5s linear infinite;*/
+    /* width: 100%; */
+}
+
+/*@keyframes seamove{
+    0% {transform:translate(0px,0px)}
+    25% {transform:translate(-150px,-15px)}
+    50% {transform:translate(-300px, 0px)}
+    75% {transform:translate(-450px,-8px)}
+    100%{transform:translate(-600px,0px)}
+}*/
+@keyframes darkwaves {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+        left: 0;
+    }
+
+    25% {
+        transform: translate(25px, 5px);
+        transform: scale(1.05);
+    }
+
+    50% {
+        transform: translate(12px, 10px);
+        transform: scale(1.05);
+    }
+
+    75% {
+        transform: translate(5px, 5px);
+        transform: scale(1.05);
+    }
+}
+
+.LightWaves {
+    animation: lightwaves 2s infinite;
+    position: relative;
+}
+
+@keyframes lightwaves {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(5px, 5px);
+        transform: scale(1.05);
+    }
+
+    50% {
+        transform: translate(0px, 5px);
+    }
+
+    75% {
+        transform: translate(12px, 10px);
+        transform: scale(1.05);
+    }
+}
+
+.about-div {
+    position: relative;
+    background-color: #2a5db8;
+}
+
+.about-div:before {
+    position: absolute;
+    right: 0;
+    top: -4%;
+    width: 100%;
+    height: 22%;
+    content: '';
+    background: url(../img/background/brown-background.png) no-repeat center;
+    background-position: top;
+    background-size: 100%;
+}
+
+
+#ripple-img {
+    position: absolute;
+    left: -37%;
+    bottom: -1px;
+    width: 100%;
+    height: 100%;
+    background: url(../img/gif/water-ripple.gif) 0 no-repeat;
+    background-position: bottom;
+}
+
+.water-ripple-img {
+    position: absolute;
+    left: 0;
+    top: 155px;
+    width: 100%;
+}
+
+.about-col {
+    padding: 160px 0px 160px 0px;
+}
+
+.about-col h3 {
+    text-align: center;
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+    font-family: Montserrat-Regular;
+}
+
+.about-col p {
+    color: #fff;
+    font-size: 18px;
+    font-family: Montserrat-Regular;
+    line-height: 30px;
+}
+
+.about-col ul li {
+    color: #fff;
+    font-size: 18px;
+    font-family: Montserrat-Regular;
+    line-height: 30px;
+}
+
+.about-col p span {
+    color: #fff;
+    font-size: 18px;
+    font-family: Montserrat-Regular;
+    line-height: 30px;
+}
+
+#more {
+    display: none;
+}
+
+#myBtn {
+    color: #da2015;
+    font-weight: 600;
+}
+
+/*--------------------------------------------------------------
+# How do they work
+--------------------------------------------------------------*/
+.diving {
+    position: absolute;
+    width: 100%;
+    animation: animate 10s linear infinite;
+    /* top: 10%; */
+    bottom: 10%;
+    -webkit-animation-direction: alternate;
+}
+
+.submarine-img {
+    position: relative;
+    width: 100%;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(-50px);
+        bottom: 20%;
+        top: 0%;
+    }
+
+    25% {
+        transform: translateY(0px);
+        bottom: 30%;
+    }
+
+    50% {
+        transform: translateY(50px);
+    }
+
+    75% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(-50px);
+        /* bottom: 20%; */
+        top: 55%;
+    }
+}
+
+#how-work-section {
+    background: #0b014b;
+    padding: 80px;
+}
+
+#how-work-section .section-title h3 {
+    text-align: center;
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+    font-family: Montserrat-Regular;
+    margin-bottom: 85px;
+}
+
+#how-work-section .section-title p {
+    color: #fff;
+    font-size: 18px;
+    font-family: Montserrat-Regular;
+    line-height: 30px;
+    text-align: justify;
+}
+
+.nav-tabs .nav-link.active {
+    color: #f8f9fa;
+    background-color: #004085;
+    border-color: #004085 #004085 #fff;
+}
+
+.nav-tabs .nav-link {
+    color: #fff;
+}
+
+.tab-pane h3 {
+    color: #fff;
+    font-size: 18px;
+    font-family: Montserrat-Regular;
+    line-height: 30px;
+    text-align: justify;
+    margin: 10px 0px 0px;
+}
+
+.tab-pane p {
+    color: #fff;
+    font-size: 18px;
+    font-family: Montserrat-Regular;
+    line-height: 30px;
+    text-align: justify;
+    margin: 10px 0px 0px;
+}
+
+#more-deposit-bonuse,
+#deposit-bonuse {
+    display: none;
+}
+
+#noDeposit,
+#deposit-read-more {
+    color: #da2015;
+    font-weight: 600;
+}
+
+.no-deposit-button {
+    margin-top: 60px;
+    background: #3a32b9;
+    border-color: #3a32b9;
+}
+
+/*--------------------------------------------------------------
+# Wagering Section
+--------------------------------------------------------------*/
+
+
+.fish {
+    position: absolute;
+    z-index: 0;
+    top: 0%;
+    left: 0px;
+    animation: swim 15s infinite linear;
+}
+
+.fish-group {
+    position: absolute;
+    z-index: 0;
+    top: 15%;
+    left: 0px;
+    animation: swim1 15s infinite linear;
+}
+
+.orange-fish {
+    position: absolute;
+    z-index: 0;
+    top: 26%;
+    right: 0px;
+    animation: swim2 15s infinite linear;
+}
+
+@keyframes swim {
+    10% {
+        bottom: 14%;
+    }
+
+    20% {
+        bottom: 16%;
+    }
+
+    30% {
+        bottom: 11%;
+    }
+
+    40% {
+        bottom: 17%;
+    }
+
+    50% {
+        bottom: 16%;
+    }
+
+    60% {
+        bottom: 17%;
+    }
+
+    70% {
+        bottom: 15%;
+    }
+
+    80% {
+        bottom: 20%;
+    }
+
+    90% {
+        bottom: 13%;
+    }
+
+    100% {
+        left: 90%;
+    }
+}
+
+@keyframes swim1 {
+    10% {
+        bottom: 14%;
+    }
+
+    20% {
+        bottom: 16%;
+    }
+
+    30% {
+        bottom: 11%;
+    }
+
+    40% {
+        bottom: 17%;
+    }
+
+    50% {
+        bottom: 16%;
+    }
+
+    60% {
+        bottom: 17%;
+    }
+
+    70% {
+        bottom: 15%;
+    }
+
+    80% {
+        bottom: 20%;
+    }
+
+    90% {
+        bottom: 13%;
+    }
+
+    100% {
+        left: 80%;
+    }
+}
+
+@keyframes swim2 {
+    10% {
+        bottom: 14%;
+    }
+
+    20% {
+        bottom: 16%;
+    }
+
+    30% {
+        bottom: 11%;
+    }
+
+    40% {
+        bottom: 17%;
+    }
+
+    50% {
+        bottom: 16%;
+    }
+
+    60% {
+        bottom: 17%;
+    }
+
+    70% {
+        bottom: 15%;
+    }
+
+    80% {
+        bottom: 20%;
+    }
+
+    90% {
+        bottom: 13%;
+    }
+
+    100% {
+        right: 80%;
+    }
+}
+
+
+.wagering-and-token-area {
+    position: relative;
+}
+
+@media (min-width: 1500px) {
+    .wagering-and-token-area:before {
+        width: 39%;
+        height: 80%;
+    }
+}
+
+.wagering-and-token-area:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 69%;
+    content: '';
+    background: url(../img/background/shape.png) no-repeat center center/cover;
+}
+
+.wagering-sec {
+    /* background-image: radial-gradient(50% 50%, #070086 0%, #050069 37%, #02004b 87%); */
+    /* background: url(../img/background/mountain.png); */
+    background-repeat: no-repeat;
+    background-color: #0b014a;
+    padding: 80px;
+    min-height: 100%;
+    background-size: cover;
+}
+
+.section-title-item {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.section-title-item .section-title {
+    color: #fff;
+    font-size: 33px;
+    font-weight: 600;
+    font-family: Montserrat-Regular;
+    margin-bottom: 65px;
+}
+
+.wagering-detail {
+    padding-top: 40px;
+}
+
+.wagering-detail p {
+    color: #fff;
+    font-size: 18px;
+    font-family: Montserrat-Regular;
+    line-height: 30px;
+    margin: 10px 0px 0px;
+    text-align: justify;
+}
+
+#wagering-more-section {
+    display: none;
+}
+
+#wagering-read-more {
+    color: #da2015;
+    font-weight: 600;
+}
+
+/*--------------------------------------------------------------
+# New Casino Section
+--------------------------------------------------------------*/
+.new-casino-area {
+    background-image: radial-gradient(50% 50%, #070086 0%, #050069 37%, #02004b 87%);
+}
+
+.new-casino-sec {
+    background: url(../img/background/mountain.png);
+    background-repeat: no-repeat;
+    background-color: #0b014a;
+}
+
+.section-padding {
+    padding: 60px;
+}
+
+.nye-img {
+    margin-bottom: 85px;
+}
+
+.new-casino-detail p {
+    color: #fff;
+    font-size: 18px;
+    font-family: Montserrat-Regular;
+    line-height: 30px;
+    margin: 10px 0px 0px;
+    text-align: justify;
+}
+
+.new-casino-detail ul li {
+    color: #fff;
+    font-size: 18px;
+    font-family: Montserrat-Regular;
+    line-height: 30px;
+    margin: 10px 0px 0px;
+}
+
+#new-casino-more-section {
+    display: none;
+}
+
+#new-casino-read-more {
+    color: #da2015;
+    font-weight: 600;
+}
+
+.game_table {
+    background: url(../img/background/table-bg.png) no-repeat center center/cover;
+    position: relative;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    overflow: hidden;
+    z-index: 1;
+    height: 100%;
+}
+
+.game_table:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(13, 29, 147, 0.64);
+    z-index: -1;
+    content: '';
+}
+
+.game_features {
+    padding: 10px 10px 110px 30px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.game_features li {
+    padding-top: 15px;
+    text-align: justify;
+    color: #fff;
+    font-size: 18px;
+    font-family: Montserrat-Regular;
+    line-height: 30px;
+}
+
+.rating-star {
+    text-align: center;
+}
+
+.play-img {
+    width: 100%;
+}
+
+.btn-ojo {
+    background: #f96443;
+    border-color: #f96443;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.game_btn {
+    position: absolute;
+    bottom: 0;
+    background: #3a32b9;
+    color: #fff;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    font-size: 18px;
+    font-family: Montserrat-Regular;
+}
+
+.game_btn:hover {
+    color: #fff;
+}
+
+.more-casino-btn {
+    margin-top: 60px;
+    background: #3a32b9;
+    border-color: #3a32b9;
+}
+
+/*--------------------------------------------------------------
+# Find Casino Section
+--------------------------------------------------------------*/
+.find-casino-sec {
+    background: url(../img/background/bg6.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #0b014a;
+}
+
+.find-casino-detail p {
+    color: #fff;
+    font-size: 18px;
+    font-family: Montserrat-Regular;
+    line-height: 30px;
+    margin: 10px 0px 0px;
+    text-align: justify;
+}
+
+.find-casino-detail ul li {
+    color: #fff;
+    font-size: 18px;
+    font-family: Montserrat-Regular;
+    line-height: 30px;
+    margin: 10px 0px 0px;
+}
+
+#find-casino-more-section {
+    display: none;
+}
+
+#find-casino-read-more {
+    color: #da2015;
+    font-weight: 600;
+}
+
+/*--------------------------------------------------------------
+# Mobile Casino And Slot Machine Section
+--------------------------------------------------------------*/
+.mobile-and-slot-machine-area {
+    position: relative;
+}
+
+@media (min-width: 1500px) {
+
+    .mobile-and-slot-machine-area:before {
+        width: 31%;
+        height: 100%;
+    }
+
+    .mobile-and-slot-machine-area:after {
+        width: 37%;
+        height: 69%;
+    }
+}
+
+.mobile-and-slot-machine-area:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 69%;
+    content: '';
+    background: url(../img/background/shape.png) no-repeat center center/cover;
+    z-index: 1;
+}
+
+.mobile-and-slot-machine-area:after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    height: 56%;
+    content: '';
+    background: url(../img/background/shape2.png) no-repeat center center/cover;
+}
+
+.mobile-casino-sec {
+    padding-top: 80px;
+    position: relative;
+    background-image: radial-gradient(50% 50%, #070086 0%, #050069 37%, #02004b 87%);
+}
+
+.mobile-casino-detail p {
+    color: #fff;
+    font-size: 18px;
+    font-family: Montserrat-Regular;
+    line-height: 30px;
+    margin: 10px 0px 0px;
+    text-align: justify;
+}
+
+#mobile-casino-more-section {
+    display: none;
+}
+
+#mobile-casino-read-more {
+    color: #da2015;
+    font-weight: 600;
+}
+
+.documentaion-shap-img img.d-shap-img-1 {
+    margin: auto;
+    -webkit-animation: bounce 1s ease-in-out 0s infinite alternate;
+    animation: bounce 1s ease-in-out 0s infinite alternate;
+    position: relative;
+}
+
+.documentaion-shap-img img.d-shap-img-2 {
+    margin: auto;
+    -webkit-animation: bounce 1s ease-in-out 0s infinite alternate;
+    animation: bounce 1s ease-in-out 0s infinite alternate;
+    -webkit-animation-delay: 1.5s;
+    animation-delay: 1.5s;
+    position: relative;
+    float: right;
+}
+
+.documentaion-shap-img img {
+    position: absolute;
+}
+
+.typing-mobile-img {
+    animation: animate 10s cubic-bezier(1, 0.03, 0.79, 1.01) infinite;
+    width: 100%;
+}
+
+.slot-machine-sec {
+    /* background-image: radial-gradient(50% 50%, #070086 0%, #050069 37%, #02004b 87%); */
+    background: url('../img/background/pattern.png');
+    background-color: #0b014b;
+    padding: 80px 80px 0px 80px;
+}
+
+.slot-machine-detail p {
+    color: #fff;
+    font-size: 18px;
+    font-family: Montserrat-Regular;
+    line-height: 30px;
+    margin: 10px 0px 0px;
+    text-align: justify;
+}
+
+#slot-machine-more-section {
+    display: none;
+}
+
+#slot-machine-read-more {
+    color: #da2015;
+    font-weight: 600;
+}
+
+.games-logo {
+    position: relative;
+    margin-top: 20px;
+}
+
+.games-logo img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.octopus-one-img {
+    width: 150px;
+}
+
+.octopus-two-img {
+    width: 250px;
+}
+
+/*--------------------------------------------------------------
+# Blog And Faq Machine Section
+--------------------------------------------------------------*/
+.blog-and-faq-area {
+    position: relative;
+}
+
+@media (min-width: 1500px) {
+
+    .blog-and-faq-area:before {
+        width: 31%;
+        height: 100%;
+    }
+
+    .blog-and-faq-area:after {
+        width: 37%;
+        height: 69%;
+    }
+}
+
+.blog-and-faq-area:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 69%;
+    content: '';
+    background: url(../img/background/shape.png) no-repeat center center/cover;
+    z-index: 1;
+}
+
+.blog-and-faq-area:after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    height: 56%;
+    content: '';
+    background: url(../img/background/shape2.png) no-repeat center center/cover;
+}
+
+.blog-sec {
+    padding-top: 80px;
+    position: relative;
+    background-image: radial-gradient(50% 50%, #070086 0%, #050069 37%, #02004b 87%);
+}
+
+.mobile-casino-detail p {
+    color: #fff;
+    font-size: 18px;
+    font-family: Montserrat-Regular;
+    line-height: 30px;
+    margin: 10px 0px 0px;
+    text-align: justify;
+}
+
+.single-blog {
+    box-shadow: 5px 5px 10px 2px #4839ad;
+    border-radius: 10px;
+    height: 560px;
+}
+
+.single-blog .blog-content {
+    padding: 25px 12px 35px 12px;
+}
+
+.single-blog .blog-content .blog-title a {
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+    -webkit-transition: all .3s ease-out 0s;
+    -moz-transition: all .3s ease-out 0s;
+    -ms-transition: all .3s ease-out 0s;
+    -o-transition: all .3s ease-out 0s;
+    transition: all .3s ease-out 0s;
+    font-family: Montserrat-Regular;
+}
+
+.blog-title {
+    text-align: center;
+
+}
+
+.blog-image img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.blog-content p {
+    color: #fff;
+    font-size: 18px;
+    font-family: Montserrat-Regular;
+    line-height: 30px;
+    margin: 10px 0px 0px;
+    text-align: center;
+}
+
+.more-blogs-btn {
+    margin-top: 60px;
+    background: #3a32b9;
+    border-color: #3a32b9;
+}
+
+.read-blog-btn {
+    width: 50%;
+    background-color: #4c168d;
+    border-color: #4c168d;
+    margin-top: 30px;
+}
+
+.read-blog-btn:hover {
+    color: #4c168d;
+    background-color: #fff;
+    border-color: #4c168d;
+}
+
+.faq-sec {
+    background-image: radial-gradient(50% 50%, #070086 0%, #050069 37%, #02004b 87%);
+}
+
+.faq-detail p {
+    color: #fff;
+    font-size: 18px;
+    font-family: Montserrat-Regular;
+    line-height: 30px;
+    margin: 10px 0px 0px;
+    text-align: justify;
+}
+
+.faq-accordion {
+    padding: 10px;
+}
+
+.faq-accordion .panel-title>a.collapsed:before {
+    float: right !important;
+    content: "\f105";
+}
+
+.faq-accordion .panel-title>a:before {
+    float: right !important;
+    font-family: FontAwesome;
+    content: "\f107";
+    padding-right: 5px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.faq-accordion .panel-heading {
+    border: 1px solid #8c88da;
+    margin: 10px auto;
+}
+
+.panel-title a {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+    display: block;
+    padding: 10px 20px;
+}
+
+.panel-body p {
+    text-align: justify;
+    color: #fff;
+    font-size: 18px;
+    font-family: Montserrat-Regular;
+    line-height: 30px;
+    margin: 10px 0px 0px;
+}
+
+.faq-more-btn {
+    margin-top: 50px;
+    margin-top: 60px;
+    background: #3a32b9;
+    border-color: #3a32b9;
+}
+
+/*--------------------------------------------------------------
+# After wagering
+--------------------------------------------------------------*/
+@media (min-width: 1500px) {
+    .wagering-and-token-area:after {
+        width: 39%;
+        height: 66%;
+    }
+}
+
+.wagering-and-token-area:after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    height: 56%;
+    content: '';
+    background: url(../img/background/shape2.png) no-repeat center center/cover;
+}
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+.mt-30 {
+    margin-top: 30px;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.mb-60 {
+    margin-bottom: 60px;
+}
+
+/*--------------------------------------------------------------
+# Review Page
+--------------------------------------------------------------*/
+#review-section {
+    position: relative;
+    margin-top: 140px;
+    margin-bottom: 140px;
+}
+
+#review-section .top-banner {
+    background: url(../img/banners/casino-bg.jpg) no-repeat center center / cover;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 258px;
+}
+
+#review-section .top-banner:before {
+    background: linear-gradient(120deg, rgba(0, 0, 0, .65) 15%, rgba(0, 13, 21, 1) 55%, rgba(0, 13, 21, 1) 100%);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: .3125rem .3125rem 0 0;
+}
+
+#review-section .casino-rating {
+    margin-bottom: 25px;
+}
+
+#review-section .casino-content {
+    left: 75px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#review-section .star-status {
+    color: #fff;
+    font-size: 11px;
+    letter-spacing: 1px;
+    display: inline-block;
+}
+
+#review-section .casino-content h1 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+#review-section .casino-star-rating {
+    display: inline-block;
+    height: .875rem;
+    position: relative;
+    width: 9.75rem;
+}
+
+#review-section .casino-logo {
+    right: 75px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#review-section .casino-logo img {
+    border-radius: 50%;
+    height: 150px;
+}
+
+#review-section .casino-bonus {
+    color: #fff;
+}
+
+#review-section .play-btn {
+    margin-top: 10px;
+    background: #3a32b9;
+    border-color: #3a32b9;
+}
+
+#review-section #nav-tab {
+    background: #eee;
+    padding: 6px 10px 0px 10px;
+}
+
+#review-section .nav-tabs .nav-link {
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#review-section .nav-tabs .nav-link.active {
+    color: #da2015;
+    background-color: transparent;
+    border-color: transparent transparent #f3f3f3;
+    border-bottom: 3px solid !important;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#review-section #nav-tab-review-content {
+    margin-top: 30px;
+}
+
+#review-section #nav-overview {
+    background: #eeeeee;
+    padding: 30px;
+}
+
+.casino-review-tab h6 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #555555;
+}
+
+.casino-review-tab .list-unstyled {
+    list-style: none;
+}
+
+.casino-review-tab .list-unstyled .plus-icon {
+    color: green;
+}
+
+.casino-review-tab .list-unstyled .minus-icon {
+    color: #fc3641;
+}
+
+.casino-review-tab .list-unstyled li {
+    font-size: 14px;
+    font-weight: 400;
+    color: #555555;
+    line-height: 30px;
+}
+
+.casino-review-tab .tab-module p {
+    color: #555555;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+#review-section #nav-details {
+    background: #eeeeee;
+    padding: 30px;
+}
+
+.detail-review-tab h6 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #555555;
+}
+
+.details-items {
+    margin-bottom: 15px;
+}
+
+.detail-review-tab p {
+    color: #555555;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+.detail-review-tab a {
+    color: #555555;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+#review-section #nav-reviews {
+    background: #eeeeee;
+    padding: 30px;
+}
+
+#review-section .btn-submit {
+    background-color: #E1152E;
+    padding: 10px;
+    color: #fff;
+    border-color: #E1152E;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#review-section .popular-casino {
+    background: #eeeeee;
+}
+
+#review-section .popular-casino h6 {
+    text-align: center;
+    padding-top: 20px;
+    font-weight: 500;
+    line-height: 15px;
+}
+
+#review-section .popular-casino .casino-list {
+    list-style: none;
+    padding: 0px;
+}
+
+#review-section .popular-casino .casino-list li {
+    list-style: none;
+    border-top: 1px dashed #ccc;
+}
+
+.casino-bottom {
+    display: none;
+    background: #da2015;
+    font-size: 14px;
+    color: #fff;
+}
+
+.casino-widget {
+    position: relative;
+}
+
+.casino-top {
+    font-size: 14px;
+    color: #555555;
+}
+
+.casino-list .casino-img {
+    border-radius: 50px;
+}
+
+.casino-inner {
+    height: 50px;
+    line-height: 48px;
+    padding: 0 15px;
+    transition: all .3s;
+}
+
+.form-review-tab {
+    margin-top: 30px;
+}
+
+.review-user-img {
+    width: 50px;
+}
+
+.review-time {
+    font-size: 15px !important;
+    font-family: Montserrat-Regular;
+    line-height: 30px;
+    text-align: left;
+    margin: 10px 0px 0px;
+}
+
+.review-comment {
+    color: #000 !important;
+    font-size: 14px !important;
+    font-family: Montserrat-Regular;
+    line-height: 30px;
+    text-align: justify;
+    margin: 10px 0px 0px;
+}
+
+/*--------------------------------------------------------------
+# News Page
+--------------------------------------------------------------*/
+#news-section {
+    position: relative;
+    margin-top: 140px;
+    margin-bottom: 140px;
+}
+
+#news-section .news-heading {
+    font-size: 25px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+#news-section .tips-heading {
+    font-size: 25px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+#news-section p {
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    text-align: justify;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.news-blog-title a {
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    font-family: Montserrat-Regular;
+}
+
+#news-section .popular-casino {
+    background: #eeeeee;
+}
+
+#news-section .popular-casino h6 {
+    text-align: center;
+    padding-top: 20px;
+    font-weight: 500;
+    line-height: 15px;
+}
+
+#news-section .popular-casino .casino-list {
+    list-style: none;
+    padding: 0px;
+}
+
+#news-section .popular-casino .casino-list li {
+    list-style: none;
+    border-top: 1px dashed #ccc;
+}
+
+#news-section .read-blog-btn {
+    width: 70%;
+    background-color: #4c168d;
+    border-color: #4c168d;
+    margin-top: 30px;
+}
+
+#news-section .read-blog-btn:hover {
+    width: 70%;
+    background-color: #fff;
+    border-color: #4c168d;
+    margin-top: 30px;
+    color: #4c168d;
+}
+
+#news-section .single-blog {
+    box-shadow: 5px 5px 10px 2px #4839ad;
+    border-radius: 10px;
+    height: 100%;
+}
+
+#news-section .search-bar {
+    width: 300px;
+    display: inline-block;
+    position: relative;
+}
+
+#news-section .select-search-bar {
+    width: 300px;
+    /* display: inline-block; */
+    margin-left: 30px;
+    float: right;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+.search {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background: #3325d9;
+    border-radius: 50%;
+    transition: all 1s;
+    z-index: 4;
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
+}
+
+.search-bar .search:hover {
+    cursor: pointer;
+}
+
+.search-bar .search::before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: 22px;
+    right: 0;
+    bottom: 0;
+    left: 22px;
+    width: 12px;
+    height: 2px;
+    background: white;
+    transform: rotate(45deg);
+    transition: all .5s;
+}
+
+.search-bar .search::after {
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: -5px;
+    right: 0;
+    bottom: 0;
+    left: -5px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid white;
+    transition: all .5s;
+}
+
+.search-bar input {
+    font-family: 'Inconsolata', monospace;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    outline: none;
+    border: none;
+    background: #3e70ff;
+    color: white;
+    text-shadow: 0 0 10px #533bd8;
+    padding: 0 80px 0 20px;
+    border-radius: 30px;
+    box-shadow: 0 0 25px 0 #0b004b, 0 20px 25px 0 rgba(0, 0, 0, 0.2);
+    transition: all 1s;
+    opacity: 0;
+    z-index: 5;
+    font-weight: bolder;
+    letter-spacing: 0.1em;
+}
+
+.search-bar input:hover {
+    cursor: pointer;
+}
+
+.search-bar input:focus {
+    width: 300px;
+    opacity: 1;
+    cursor: text;
+}
+
+.search-bar input:focus~.search {
+    left: -250px;
+    background: #151515;
+    z-index: 6;
+}
+
+.search-bar input:focus~.search::before {
+    top: 0;
+    left: 0;
+    width: 25px;
+}
+
+.search-bar input:focus~.search::after {
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 2px;
+    border: none;
+    background: white;
+    border-radius: 0%;
+    transform: rotate(-45deg);
+}
+
+.search-bar input::placeholder {
+    color: white;
+    opacity: 0.5;
+    font-weight: bolder;
+    padding-left: 50px;
+}
+
+.search-select-option {
+    border: 4px solid #3d6ffe;
+}
+
+/*--------------------------------------------------------------
+# FAQ Page
+--------------------------------------------------------------*/
+#faq-section {
+    position: relative;
+    margin-top: 140px;
+    margin-bottom: 140px;
+}
+
+#faq-section h3 {
+    text-align: center;
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+    font-family: Montserrat-Regular;
+    margin-bottom: 65px;
+}
+
+#faq-section .popular-casino {
+    background: #eeeeee;
+}
+
+#faq-section .popular-casino h6 {
+    text-align: center;
+    padding-top: 20px;
+    font-weight: 500;
+    line-height: 15px;
+}
+
+#faq-section .popular-casino .casino-list {
+    list-style: none;
+    padding: 0px;
+}
+
+#faq-section .popular-casino .casino-list li {
+    list-style: none;
+    border-top: 1px dashed #ccc;
+}
+
+/*--------------------------------------------------------------
+# Casino Bonus Page
+--------------------------------------------------------------*/
+#casino-bonuse {
+    position: relative;
+    background: #42BDF4;
+    /*
+        !* fallback for old browsers *!
+        background: -webkit-linear-gradient(to top, #6DD5FA, #57a4d6);
+        !* Chrome 10-25, Safari 5.1-6 *!
+        background: linear-gradient(to top, #6DD5FA, #57a4d6);
+        !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
+    padding: 120px 80px 4px 80px;
+}
+
+#background-wrap {
+    bottom: 0;
+    left: 0;
+    padding-top: 100px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0;
+}
+
+@keyframes animateCloud {
+    0% {
+        margin-left: -1000px;
+    }
+
+    100% {
+        margin-left: 80%;
+    }
+}
+
+.x1 {
+    animation: animateCloud 35s linear infinite;
+    transform: scale(0.65);
+}
+
+.x2 {
+    animation: animateCloud 20s linear infinite;
+    transform: scale(0.3);
+}
+
+.x3 {
+    animation: animateCloud 30s linear infinite;
+    transform: scale(0.5);
+}
+
+.x4 {
+    animation: animateCloud 18s linear infinite;
+    transform: scale(0.4);
+}
+
+.x5 {
+    animation: animateCloud 25s linear infinite;
+    transform: scale(0.55);
+}
+
+.cloud {
+    background: #4b9ccc;
+    background: linear-gradient(top, #fff 5%, #f1f1f1 100%);
+    border-radius: 100px;
+    box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+    height: 120px;
+    position: relative;
+    width: 350px;
+}
+
+.cloud::after,
+.cloud::before {
+    background: #4b9ccc;
+    content: '';
+    position: absolute;
+    z-index: 0;
+}
+
+.cloud::after {
+    border-radius: 100px;
+    height: 100px;
+    width: 100px;
+    left: 50px;
+    top: -50px;
+}
+
+.cloud::before {
+    border-radius: 200px;
+    height: 180px;
+    width: 180px;
+    right: 50px;
+    top: -90px;
+}
+
+.bird-container {
+    position: absolute;
+    top: 5%;
+    left: -10%;
+    -webkit-transform: scale(0) translateX(-10vw);
+    transform: scale(0) translateX(-10vw);
+    will-change: transform;
+    -webkit-animation-name: fly-right-one;
+    animation-name: fly-right-one;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.bird-container--one {
+    -webkit-animation-duration: 15s;
+    animation-duration: 15s;
+    -webkit-animation-delay: 0;
+    animation-delay: 0;
+}
+
+.bird-container--two {
+    -webkit-animation-duration: 16s;
+    animation-duration: 16s;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+.bird {
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg);
+    background-size: auto 100%;
+    width: 88px;
+    height: 125px;
+    will-change: background-position;
+    -webkit-animation-name: fly-cycle;
+    animation-name: fly-cycle;
+    -webkit-animation-timing-function: steps(10);
+    animation-timing-function: steps(10);
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.bird--one {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-delay: -0.5s;
+    animation-delay: -0.5s;
+}
+
+.bird--two {
+    -webkit-animation-duration: 0.9s;
+    animation-duration: 0.9s;
+    -webkit-animation-delay: -0.75s;
+    animation-delay: -0.75s;
+}
+
+@-webkit-keyframes fly-cycle {
+    100% {
+        background-position: -900px 0;
+    }
+}
+
+@keyframes fly-cycle {
+    100% {
+        background-position: -900px 0;
+    }
+}
+
+@keyframes fly-right-one {
+    0% {
+        -webkit-transform: scale(0.3) translateX(-10vw);
+        transform: scale(0.3) translateX(-10vw);
+    }
+
+    100% {
+        -webkit-transform: translateY(0vh) translateX(100vw) scale(0.6);
+        transform: translateY(0vh) translateX(100vw) scale(0.6);
+    }
+}
+
+#casino-bonuse h2 {
+    color: #fff;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+#casino-bonuse p {
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#casino-bonuse .rating-mobile .rating-mobile-area .rating-mobile-content p {
+    font-size: 13px !important;
+    text-align: left !important;
+}
+#casino-bonuse .rating-mobile .other-description p {
+    color: #fff !important;
+    font-size: 13px !important;
+    margin-bottom: 0 !important;
+    text-align: left !important;
+}
+
+#casino-bonuse .top-banner {
+    background: url(../img/banners/casino.jpg) no-repeat center center / cover;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 258px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 5px #4038c2;
+
+}
+
+#casino-bonuse .read-review {
+    background: #fff;
+    padding: 5px;
+    border-bottom: 1px dashed;
+    margin-left: 13px;
+    color: #3932b9;
+    font-weight: 600;
+}
+
+.casino-nav {
+    margin-top: 30px;
+}
+
+.first-casino-banner {
+    position: relative;
+    width: 100%;
+}
+
+.first-casino-banner-logo {
+    margin-top: 15px;
+    margin-left: 26px;
+}
+
+.casino-bonus .bonus-amount {
+    color: #fff;
+    font-size: 25px;
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 30px;
+    font-weight: bold;
+}
+
+.claim-btn {
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 15px;
+    background: #3a32b9;
+    border-color: #3a32b9;
+}
+
+.banner-heading {
+    background: #1a1f52;
+    padding-top: 11px;
+    width: 310px;
+    border-radius: 10px;
+    padding-left: 15px;
+    margin-bottom: 15px;
+}
+
+.banner-heading h4 {
+    display: inline-block;
+    color: #fff;
+}
+
+.second-casino-banner {
+    position: relative;
+}
+
+.second-casino-banner-logo {
+    margin-top: 15px;
+    margin-left: 26px;
+}
+
+.casino-bonus .bonus-amount {
+    color: #fff;
+    font-size: 25px;
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 30px;
+    font-weight: bold;
+}
+
+.claim-btn {
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 15px;
+    background: #3a32b9;
+    border-color: #3a32b9;
+}
+
+.first-casino-banner .left-banner {
+    width: 100%;
+    height: 210px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 3px #555555;
+}
+
+.first-casino-banner .banner-text {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.second-casino-banner .right-banner {
+    width: 100%;
+    height: 210px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 3px #555555;
+}
+
+.second-casino-banner .banner-text {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+#casino-bonus-content {
+    padding: 80px;
+    position: relative;
+    background-color: #0B004B;
+}
+
+#casino-bonus-content h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+    font-family: Montserrat-Regular;
+    margin-bottom: 65px;
+}
+
+#casino-bonus-content h4 {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 500;
+    font-family: Montserrat-Regular;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+#casino-bonus-content p {
+    color: #fff;
+    font-size: 18px;
+    font-family: Montserrat-Regular;
+    line-height: 30px;
+    margin: 10px 0px 0px;
+    text-align: justify;
+}
+
+.boat-animation {
+    background-color: #6cd3f8;
+}
+
+.boat-animation img {
+    position: relative;
+    top: 90px;
+    transform: translate(0px, 0px);
+    animation: seamove 10.5s linear infinite;
+}
+
+@keyframes seamove {
+    0% {
+        transform: translate(0px, 0px)
+    }
+
+    25% {
+        transform: translate(400px, -15px)
+    }
+
+    50% {
+        transform: translate(800px, 0px)
+    }
+
+    75% {
+        transform: translate(1200px, -8px)
+    }
+
+    100% {
+        transform: translate(1600px, 0px)
+    }
+}
+
+#casino-bonus-content .casino-jelly-img {
+    position: absolute;
+    top: 10%;
+    width:150px;
+}
+
+#casino-bonus-content .casino-crab-img {
+    position: absolute;
+    top: 50%;
+    width: 200px;
+}
+
+/*--------------------------------------------------------------
+# New Casino Page
+--------------------------------------------------------------*/
+#new-casino {
+    position: relative;
+    background: #42bdf4;
+    /* fallback for old browsers */
+    /*background: -webkit-linear-gradient(to top, #6DD5FA, #57a4d6);
+    !* Chrome 10-25, Safari 5.1-6 *!
+    background: linear-gradient(to top, #6DD5FA, #57a4d6);
+    !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
+    padding: 120px 80px 80px 80px;
+}
+
+#new-casino .new-casino-mainheading {
+    color: #fff;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 600;
+    margin: 0;
+}
+
+#new-casino .new-casino-subheading {
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+}
+
+#new-casino .new-casino-detail p {
+    color: #000;
+    font-size: 18px;
+    font-family: Montserrat-Regular;
+    line-height: 30px;
+    margin: 10px 0px 0px;
+    text-align: justify;
+}
+
+#new-casino .new-casino-detail ul li {
+    color: #000;
+    font-size: 18px;
+    font-family: Montserrat-Regular;
+    line-height: 30px;
+    margin: 10px 0px 0px;
+    text-align: justify;
+}
+
+.new-top-casino-heading {
+    font-weight: bold;
+    font-family: norwester;
+    font-size: 18px;
+    color: #000;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.new-top-casino-heading span {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+#new-casino-content {
+    padding: 80px;
+    position: relative;
+    background-color: #0B004B;
+}
+
+#new-casino-content h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+    font-family: Montserrat-Regular;
+    margin-bottom: 65px;
+}
+
+#new-casino-content h4 {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 500;
+    font-family: Montserrat-Regular;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#new-casino-content p {
+    color: #fff;
+    font-size: 18px;
+    font-family: Montserrat-Regular;
+    line-height: 30px;
+    margin: 40px 0px 0px;
+    text-align: justify;
+}
+
+#new-casino-content ul li {
+    color: #fff;
+    text-align: justify;
+}
+
+#new-casino-content ul li span {
+    font-weight: bold;
+}
+
+#new-casino-content .casino-jelly-img {
+    position: absolute;
+    top: 10%;
+}
+
+#new-casino-content .casino-tortoise-img {
+    position: absolute;
+    top: 50%;
+    animation: go-tortoise 6s 1 1.3s ease-in-out forwards;
+    width:200px;
+}
+
+@keyframes go-tortoise {
+
+    20%,
+    40% {
+        left: 20%;
+    }
+
+    60% {
+        left: 45%;
+    }
+
+    80% {
+        left: 60%;
+    }
+
+    90% {
+        left: 70%;
+    }
+
+    100% {
+        left: 80%;
+    }
+}
+
+/*--------------------------------------------------------------
+# Games Page
+--------------------------------------------------------------*/
+#games-new-section {
+    position: relative;
+}
+
+#games-new-section .game-top-banner {
+    background: url(../img/banners/games.png) no-repeat center center / cover;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 400px;
+}
+
+#games-new-section .game-top-banner:before {
+    background: linear-gradient(120deg, rgba(0, 0, 0, 0.79) 15%, rgba(0, 0, 0, .79) 55%, rgba(0, 0, 0, .79) 100%);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: .3125rem .3125rem 0 0;
+}
+
+.game-top-banner .game-banner-content {
+    padding-top: 150px;
+    width: 100%;
+}
+
+.game-banner-content h1 {
+    color: #fff;
+    font-size: 2.6vw;
+    text-align: center;
+    font-family: norwester;
+}
+
+.game-banner-content p {
+    color: #fff;
+    font-size: 0.8vw;
+    text-align: center;
+}
+
+#games-new-section .games-section-content {
+    padding: 80px;
+}
+
+#games-new-section .search-filters {
+    margin-top: 40px;
+}
+
+#game-new-section .search-widget {
+    position: relative;
+}
+
+.search-widget input {
+    border: 1px solid #da2015;
+    width: 100%;
+    height: 35px;
+    padding: 0 20px;
+    border-radius: 0px;
+}
+
+.search-widget button {
+    border: medium none;
+    background: transparent;
+    color: #888;
+    font-size: 13px;
+    height: 35px;
+    line-height: 33px;
+    position: absolute;
+    right: 6px;
+    top: 0px;
+    width: 50px;
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.content .content-overlay {
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+.content:hover .content-overlay {
+    opacity: 1;
+}
+
+.content-image {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.content-details {
+    position: absolute;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.content:hover .content-details {
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+}
+
+.content-details h5 {
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+}
+
+.content-details p {
+    color: #fff;
+    font-size: 0.8em;
+}
+
+.fadeIn-top {
+    top: 20%;
+}
+
+#games-new-section .popular-casino {
+    background: #eeeeee;
+}
+
+#games-new-section .popular-casino h6 {
+    text-align: center;
+    padding-top: 20px;
+    font-weight: 500;
+    line-height: 15px;
+}
+
+#games-new-section .popular-casino .casino-list {
+    list-style: none;
+    padding: 0px;
+}
+
+#games-new-section .popular-casino .casino-list li {
+    list-style: none;
+    border-top: 1px dashed #ccc;
+}
+
+.filter {
+    position: static;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: margin 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    -o-transition: margin 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    -moz-transition: margin 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: margin 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    margin-top: 0;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.vertical-filters {
+    padding-bottom: 15px;
+    padding-top: 14px;
+    padding-left: 25px;
+    border-top: solid 1px #da2015;
+    border-bottom: solid 1px #e9e9ed;
+    border-right: 1px solid #da2015;
+    border-left: 1px solid #da2015;
+    position: relative;
+    background: #da2015;
+    border-radius: 5px;
+}
+
+.vertical-filters span {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.provider-container {
+    position: relative;
+}
+
+.vertical-filters-filters {
+    padding-top: 20px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    border-bottom: solid 1px #e9e9ed;
+    position: relative;
+    border-right: 1px solid #EDEBEF;
+    border-left: 1px solid #EDEBEF;
+    border-radius: 5px;
+}
+
+.vertical-filters-header {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin: 0 0 18px 0;
+    clear: both;
+    color: #000;
+    display: block;
+}
+
+.vertical-filters-header:after {
+    display: block;
+    position: absolute;
+    content: "";
+    height: 2px;
+    left: 27px;
+    width: 60px;
+    background: #373d54;
+}
+
+.provider-container ul {
+    list-style: none;
+    padding-left: 15px !important;
+}
+
+.provider-container li {
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+
+.vertical-filters-filters .vertical-filters-label {
+    display: block;
+    width: 95%;
+    white-space: nowrap;
+    cursor: pointer;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    min-height: 17px;
+    color: #fff;
+}
+
+.provider-label {
+    color: #000;
+    font-size: 0.8vw;
+    padding-left: 4px;
+}
+
+
+#providerCollapse .form-group {
+    display: block;
+    margin-bottom: 15px;
+}
+
+#providerCollapse .form-group input {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer;
+}
+
+#providerCollapse .form-group label {
+    position: relative;
+    cursor: pointer;
+}
+
+#providerCollapse .form-group label:before {
+    content: '';
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 2px solid #0079bf;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+    padding: 10px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+#providerCollapse .form-group input:checked+label:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 9px;
+    width: 6px;
+    height: 14px;
+    border: solid #0079bf;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.rtp-label {
+    color: #000;
+    font-size: 14px;
+    padding-left: 4px;
+}
+
+.rtp-label input {
+    margin: 0 16px 0 0;
+    visibility: hidden;
+}
+
+.common-radioIndicator {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    top: -23px;
+    left: -23px;
+}
+
+.rtp-label input:checked~.common-radioIndicator:before {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    border-color: #da2015;
+    visibility: visible;
+    background: #da2015;
+    -webkit-box-shadow: inset 0 0 0 3px #FFFFFF;
+    -moz-box-shadow: inset 0 0 0 3px #FFFFFF;
+    box-shadow: inset 0 0 0 3px #FFFFFF;
+}
+
+.common-radioIndicator:before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #c3c2c9;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    visibility: visible;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 2px;
+    text-align: center;
+}
+
+/*--------------------------------------------------------------
+# Single Game Page
+--------------------------------------------------------------*/
+#single-game-section {
+    position: relative;
+}
+
+#single-game-section .game-top-banner {
+    background: url(../img/banners/games.png) no-repeat center center / cover;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 400px;
+}
+
+#single-game-section .game-top-banner:before {
+    background: linear-gradient(120deg, rgba(0, 0, 0, 0.79) 15%, rgba(0, 0, 0, .79) 55%, rgba(0, 0, 0, .79) 100%);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: .3125rem .3125rem 0 0;
+}
+
+#single-game-section .play-single-btn {
+    text-align: center;
+    padding: 10px;
+    background: #da2015;
+    color: #fff;
+    border-radius: 50px;
+}
+
+.game-top-banner .game-banner-content {
+    padding-top: 150px;
+    width: 100%;
+    text-align: center;
+}
+
+.game-banner-content h1 {
+    color: #fff;
+    font-size: 2.6vw;
+    text-align: center;
+    font-family: norwester;
+}
+
+.game-banner-content p {
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+}
+
+#single-game-section .popular-casino {
+    background: #eeeeee;
+}
+
+#single-game-section .popular-casino h6 {
+    text-align: center;
+    padding-top: 20px;
+    font-weight: 500;
+    line-height: 15px;
+}
+
+#single-game-section .popular-casino .casino-list {
+    list-style: none;
+    padding: 0px;
+}
+
+#single-game-section .popular-casino .casino-list li {
+    list-style: none;
+    border-top: 1px dashed #ccc;
+}
+
+#single-game-section .play-game-content h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+    font-family: Montserrat-Regular;
+    margin-bottom: 65px;
+    margin-top: 40px;
+}
+
+#single-game-section .play-game-content .play-game-list {
+    background: #fff;
+    padding: 30px;
+    border-radius: 17px;
+
+}
+
+#single-game-section .play-game-content .play-game-list p {
+    margin: 0px 0px 10px 0px;
+    font-weight: 800;
+    color: navy;
+    text-align: center;
+}
+#single-game-section .play-game-content .play-game-list p span
+{
+    display: inherit;
+    text-align: center;
+    color: #000;
+    font-weight: normal;
+}
+#single-game-section .single-game-content {
+    padding: 80px;
+}
+
+.play-game-frame {
+    background: #000;
+    padding: 20px;
+    height: 500px;
+    border-radius: 15px;
+}
+
+.play-game-frame h4 {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 500;
+    font-family: Montserrat-Regular;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.play-game-content h4 {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 500;
+    font-family: Montserrat-Regular;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.single-game-table {
+    border: 1px solid #fff;
+    border-radius: 20px;
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    background: #fff;
+}
+
+.single-game-table td {
+    color: #000;
+    padding: 10px 10px 10px 50px;
+}
+
+.single-game-table td:first-child {
+    font-weight: 800;
+    color: navy;
+}
+
+.play-game-content p {
+    color: #fff;
+    font-size: 18px;
+    font-family: Montserrat-Regular;
+    line-height: 30px;
+    margin: 40px 0px 0px;
+    text-align: justify;
+}
+
+.play-game-content ul li {
+    color: #ffff;
+}
+
+/*--------------------------------------------------------------
+# Single News Page
+--------------------------------------------------------------*/
+#single-news-section {
+    position: relative;
+    margin-top: 140px;
+    margin-bottom: 140px;
+}
+
+#single-news-section .top-banner {
+    background: url(../img/banners/casino-bg.jpg) no-repeat center center / cover;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 258px;
+}
+
+#single-news-section .entry-main {
+    padding-bottom: 54px;
+}
+
+#single-news-section .entry-meta {
+    position: relative;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eee;
+    text-align: right;
+}
+
+#single-news-section .entry-header h2 {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+    font-family: Montserrat-Regular;
+    margin-bottom: 65px;
+    margin-top: 40px;
+}
+
+#single-news-section .entry-content p {
+    color: #fff;
+    font-size: 18px;
+    font-family: Montserrat-Regular;
+    line-height: 30px;
+    margin: 40px 0px 0px;
+    text-align: justify;
+}
+
+#single-news-section .section-comment {
+    padding-top: 70px;
+    border-top: 1px solid #eee;
+}
+
+#single-news-section .section-comment h2 {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+    font-family: Montserrat-Regular;
+    margin-bottom: 65px;
+    margin-top: 40px;
+}
+
+.comments-list {
+    padding-top: 45px;
+}
+
+.comments-list .comment {
+    margin-bottom: 45px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #eee;
+}
+
+.comments-list .comment-face {
+    float: left;
+    overflow: hidden;
+    width: 80px;
+    border-radius: 50%;
+}
+
+.comments-list .comment-header {
+    margin-bottom: 16px;
+    line-height: 1;
+}
+
+.comments-list .comment-author {
+    display: inline-block;
+    margin-right: 10px;
+    font: normal normal 18px Montserrat;
+    color: #fff;
+}
+
+.comments-list .comment-datetime {
+    display: inline-block;
+    margin-right: 35px;
+    font-size: 13px;
+    color: #fff;
+}
+
+.comments-list .comment-btn {
+    padding: 3px 15px;
+    font-family: Montserrat;
+    font-size: 12px;
+    color: #000;
+    background-color: #f1f5fa;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    text-transform: uppercase;
+}
+
+.comments-list .comment-body {
+    padding-right: 40px;
+}
+
+.comments-list .comment-body p {
+    color: #fff;
+}
+
+.section-reply-form h2 {
+    color: #fff;
+}
+
+.section-reply-form label {
+    color: #fff;
+}
+
+.section-reply-form .btn-comment {
+    background: #3a32b9;
+    border-color: #3a32b9;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.section-reply-form a {
+    color: #fff;
+}
+
+.section-reply-form input[type='checkbox'] {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer;
+}
+
+.section-reply-form #accept-label:before {
+    content: '';
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 2px solid #0079bf;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+    padding: 7px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.section-reply-form #accept-label:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 7px;
+    left: 22px;
+    width: 4px;
+    height: 9px;
+    border: solid #ffffff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+#single-news-section .popular-casino {
+    background: #eeeeee;
+}
+
+#single-news-section .popular-casino h6 {
+    text-align: center;
+    padding-top: 20px;
+    font-weight: 500;
+    line-height: 15px;
+}
+
+#single-news-section .popular-casino .casino-list {
+    list-style: none;
+    padding: 0px;
+}
+
+#single-news-section .popular-casino .casino-list li {
+    list-style: none;
+    border-top: 1px dashed #ccc;
+}
+
+/*--------------------------------------------------------------
+# Newsletter Popup
+--------------------------------------------------------------*/
+.modal-newsletter {
+    color: #999;
+    width: 625px;
+    font-size: 15px;
+    max-width: 600px;
+
+}
+
+#newsletterModal .modal-dialog {
+    -webkit-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    top: 50%;
+}
+
+.modal-newsletter .modal-content {
+    padding: 30px;
+    border-radius: 0;
+    border: none;
+    background: url(../img/background/news.png) bottom no-repeat;
+    background-color: #c1e6f3;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px 0px #8f949a;
+    /*height: 490px;*/
+}
+
+.modal-newsletter .modal-header {
+    border-bottom: none;
+    position: relative;
+    border-radius: 0;
+}
+
+.modal-newsletter h4 {
+    color: #000;
+    font-size: 30px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.modal-newsletter p {
+    color: #000;
+}
+
+.modal-newsletter .close {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    text-shadow: none;
+    opacity: 0.3;
+    font-size: 24px;
+}
+
+.modal-newsletter .close:hover {
+    opacity: 0.8;
+}
+
+.modal-newsletter .icon-box {
+    color: #7265ea;
+    display: inline-block;
+    z-index: 9;
+    text-align: center;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.modal-newsletter .icon-box i {
+    font-size: 110px;
+}
+
+.modal-newsletter .form-control {
+    min-height: 46px;
+    border-radius: 0;
+}
+
+.modal-newsletter .form-control {
+    box-shadow: none;
+    border-color: #dbdbdb;
+}
+
+.modal-newsletter .form-control:focus {
+    border-color: #f95858;
+    box-shadow: 0 0 8px rgba(249, 88, 88, 0.4);
+}
+
+.modal-newsletter .btn {
+    color: #fff;
+    background: #f95858;
+    text-decoration: none;
+    transition: all 0.4s;
+    line-height: normal;
+    padding: 10px 20px;
+    min-width: 150px;
+    margin-left: 6px !important;
+    border: none;
+}
+
+.modal-newsletter .btn:hover,
+.modal-newsletter .btn:focus {
+    box-shadow: 0 0 8px rgba(249, 88, 88, 0.4);
+    background: #f72222;
+    outline: none;
+}
+
+.modal-newsletter .input-group {
+    margin-top: 30px;
+}
+
+#newsletterModal .modal-content .form-group {
+    display: block;
+    margin-bottom: 15px;
+}
+
+#newsletterModal .modal-content .form-group input {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer;
+}
+
+#newsletterModal .modal-content .form-group label {
+    position: relative;
+    cursor: pointer;
+}
+
+#newsletterModal .modal-content .form-group label:before {
+    content: '';
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 2px solid #0079bf;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+    padding: 7px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+#newsletterModal .modal-content .form-group input:checked+label:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 9px;
+    width: 6px;
+    height: 14px;
+    border: solid #0079bf;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/*--------------------------------------------------------------
+# About Page
+--------------------------------------------------------------*/
+#about-section-page {
+    position: relative;
+    margin-top: 140px;
+    margin-bottom: 140px;
+}
+
+#about-section-page h3 {
+    text-align: center;
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+    font-family: Montserrat-Regular;
+    margin-bottom: 65px;
+}
+
+#about-section-page p {
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    text-align: justify;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+/*--------------------------------------------------------------
+# Privacy Policy Page
+--------------------------------------------------------------*/
+#privacy-section-page {
+    position: relative;
+    margin-top: 140px;
+    margin-bottom: 140px;
+}
+
+#privacy-section-page h3 {
+    text-align: center;
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+    font-family: Montserrat-Regular;
+    margin-bottom: 65px;
+}
+
+#privacy-section-page h4 {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    font-family: Montserrat-Regular;
+    margin-bottom: 10px;
+}
+
+#privacy-section-page h5 {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: Montserrat-Regular;
+    margin-bottom: 10px;
+}
+
+#privacy-section-page p {
+    font-size: 16px;
+    color: #fff;
+    text-align: justify;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+#privacy-section-page a {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-align: justify;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+#privacy-section-page ul li {
+    font-size: 16px;
+    color: #fff;
+    text-align: justify;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+/*--------------------------------------------------------------
+# Terms Page
+--------------------------------------------------------------*/
+#terms-section-page {
+    position: relative;
+    margin-top: 140px;
+    margin-bottom: 140px;
+}
+
+#terms-section-page h3 {
+    text-align: center;
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+    font-family: Montserrat-Regular;
+    margin-bottom: 65px;
+}
+
+#terms-section-page p {
+    font-size: 14px;
+    color: #fff;
+    text-align: justify;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+#terms-section-page h4 {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    font-family: Montserrat-Regular;
+    margin-bottom: 10px;
+}
+
+#terms-section-page h5 {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: Montserrat-Regular;
+    margin-bottom: 10px;
+}
+
+#terms-section-page a {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-align: justify;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+#terms-section-page ul li {
+    font-size: 16px;
+    color: #fff;
+    text-align: justify;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+/*--------------------------------------------------------------
+# General Information Page
+--------------------------------------------------------------*/
+#general-section-page {
+    position: relative;
+    margin-top: 140px;
+    margin-bottom: 140px;
+}
+
+#general-section-page h3 {
+    text-align: center;
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+    font-family: Montserrat-Regular;
+    margin-bottom: 65px;
+}
+
+#general-section-page h4 {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    font-family: Montserrat-Regular;
+    margin-bottom: 10px;
+}
+
+#general-section-page h5 {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: Montserrat-Regular;
+    margin-bottom: 10px;
+}
+
+#general-section-page p {
+    font-size: 16px;
+    color: #fff;
+    text-align: justify;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+#general-section-page a {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-align: justify;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+#general-section-page ul li {
+    font-size: 16px;
+    color: #fff;
+    text-align: justify;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+/*--------------------------------------------------------------
+# Responsible gambling Page
+--------------------------------------------------------------*/
+#responsible-section-page {
+    position: relative;
+    margin-top: 140px;
+    margin-bottom: 140px;
+}
+
+#responsible-section-page h3 {
+    text-align: center;
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+    font-family: Montserrat-Regular;
+    margin-bottom: 65px;
+}
+
+#responsible-section-page h4 {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    font-family: Montserrat-Regular;
+    margin-bottom: 10px;
+}
+
+#responsible-section-page p {
+    font-size: 16px;
+    color: #fff;
+    text-align: justify;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+/*--------------------------------------------------------------
+# Site Map Page
+--------------------------------------------------------------*/
+#site-map-section {
+    position: relative;
+    margin-top: 140px;
+    margin-bottom: 140px;
+}
+
+#site-map-section .category-section {
+    list-style: none;
+}
+
+#site-map-section .category-section li h3 {
+    color: #fff;
+    font-weight: 600;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+#site-map-section .subcategory-section {
+    list-style: none;
+    padding: 0;
+}
+
+#site-map-section .subcategory-section li {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+#site-map-section .subcategory-section li a {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#site-map-section .nestedsubcategory-section li {
+    color: #fff;
+    font-size: 20px;
+    font-weight: normal;
+    padding-top: 8px;
+}
+
+#site-map-section .nestedsubcategory-section li a {
+    color: #fff;
+    font-size: 20px;
+    font-weight: normal;
+}
+/*--------------------------------------------------------------
+# Cookies Page
+--------------------------------------------------------------*/
+#cookie-section-page {
+    position: relative;
+    margin-top: 140px;
+    margin-bottom: 140px;
+}
+
+#cookie-section-page h3 {
+    text-align: center;
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+    font-family: Montserrat-Regular;
+    margin-bottom: 65px;
+}
+
+#cookie-section-page p {
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    text-align: justify;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+#cookie-section-page h4 {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    font-family: Montserrat-Regular;
+    margin-bottom: 10px;
+}
+
+#cookie-section-page h5 {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: Montserrat-Regular;
+    margin-bottom: 10px;
+}
+#cookie-section-page .cookie-table
+{
+    border: 1px solid #fff;
+    border-radius: 5px;
+    display: block;
+    background: #fff;
+    padding: 15px;
+}
+#cookie-section-page .cookie-table th,td
+{
+    padding-right: 20px;
+}
+#cookie-section-page ul li {
+    font-size: 16px;
+    color: #fff;
+    text-align: justify;
+    position: relative;
+    padding-bottom: 12px;
+}
+.cookiealert a{
+    color: #fff;
+}
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+#footer {
+    color: #eee;
+    font-size: 14px;
+}
+
+#footer .footer-top {
+    /* background: #004085; */
+    background: url('../img/background/underwater.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: #08022a;
+    padding: 80px 0 30px 0;
+    background-position: bottom;
+}
+
+#footer .footer-top .footer-info {
+    margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-info h3 {
+    font-size: 34px;
+    margin: 0 0 20px 0;
+    padding: 2px 0 2px 10px;
+    line-height: 1;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    letter-spacing: 3px;
+    border-left: 4px solid #fff;
+}
+
+#footer .footer-top .footer-info p {
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 0;
+    font-family: "Montserrat", sans-serif;
+    color: #eee;
+}
+
+#footer .footer-top .social-links a {
+    font-size: 18px;
+    display: inline-block;
+    background: #051e4c;
+    color: #eee;
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 4px;
+    border-radius: 50%;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+}
+
+#footer .footer-top .social-links a:hover {
+    background: #da2015;
+    color: #fff;
+}
+
+#footer .footer-top h4 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+#footer .footer-top h4::before,
+#footer .footer-top h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+}
+
+#footer .footer-top h4::before {
+    right: 0;
+    background: #555;
+}
+
+#footer .footer-top h4::after {
+    background: #fff;
+    width: 60px;
+}
+
+#footer .footer-top .footer-links {
+    margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#footer .footer-top .footer-links ul i {
+    padding-right: 8px;
+    color: #ddd;
+}
+
+#footer .footer-top .footer-links ul li {
+    border-bottom: 1px solid #fff;
+    padding: 10px 0;
+}
+
+#footer .footer-top .footer-links ul li:first-child {
+    padding-top: 0;
+}
+
+#footer .footer-top .footer-links ul a {
+    color: #eee;
+}
+
+#footer .footer-top .footer-links ul a:hover {
+    color: #da2015;
+}
+
+#footer .footer-top .footer-contact {
+    margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-contact p {
+    line-height: 26px;
+}
+
+#footer .footer-top .footer-newsletter {
+    margin-bottom: 30px;
+}
+
+#footer .email-link {
+    color: #fff;
+}
+
+#footer .footer-top .footer-newsletter input[type="email"] {
+    border: 0;
+    padding: 6px 8px;
+    width: 65%;
+}
+
+#footer .footer-top .footer-newsletter input[type="submit"] {
+    background: #da2015;
+    border: 0;
+    width: 35%;
+    padding: 6px 0;
+    text-align: center;
+    color: #fff;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+#footer .footer-top .footer-newsletter input[type="submit"]:hover {
+    background: #13a456;
+}
+
+#footer .copyright {
+    text-align: center;
+    padding-top: 10px;
+}
+
+#footer .age {
+    text-align: center;
+    width: calc(100px + 6vw);
+    margin: 0 255px;
+    top: 0px;
+    position: relative;
+    color: #fff;
+}
+
+#footer .help {
+    text-align: center;
+    width: calc(100px + 6vw);
+    margin: 0 135px;
+    top: 0px;
+    position: relative;
+    color: #fff;
+}
+
+#footer .help img {
+    width: 40px;
+}
+
+#footer .credits {
+    text-align: center;
+    font-size: 13px;
+    color: #ddd;
+}
+
+@media (max-width: 1600px) {
+    /*.main-nav {
+        position: absolute;
+        right: 185px;
+        top: 4px;
+    }*/
+}
+
+
+/*--------------------------------------------------------------
+# Responsive Media Queries
+--------------------------------------------------------------*/
+@media only screen and (max-width: 767px) {
+
+    /*--------------------------------------------------------------
+    # Index page
+    --------------------------------------------------------------*/
+    #header {
+        height: 40px;
+    }
+
+    .carousel-item {
+        padding-top: 0px;
+    }
+
+    .mobile-nav-toggle i {
+        margin: 10px 18px 0 0;
+    }
+
+    .logo-img {
+        position: absolute;
+        top: 16px;
+        left: 50%;
+        margin-left: -60px;
+        z-index: 20;
+    }
+
+    .landing-logo-img {
+        margin-top: -18px;
+        width: 115px;
+    }
+
+    #slider-section {
+        padding-top: 17%;
+        transform: translate(0px, 71px);
+        z-index: 1;
+    }
+
+    #carouselContent {
+        position: absolute;
+        top: 0;
+    }
+
+    #carouselContentMobile .carousel-item h2 {
+        font-size: 12px;
+        margin-bottom: 3px;
+    }
+
+    .logo-icon-img {
+        width: 55px;
+    }
+
+    .top-casino-heading {
+        font-size: 25px;
+    }
+
+    .about-div:before {
+        top: -6px;
+    }
+
+    #ripple-img {
+        left: -10%;
+        bottom: -10px;
+    }
+
+    .slot-machine-sec {
+        padding: 80px 0px;
+    }
+
+    #particle {
+        display: none;
+    }
+
+    .diving {
+        width: 280px;
+    }
+
+    .octopus-one-img {
+        width: 90px;
+    }
+
+    .octopus-two-img {
+        width: 90px;
+    }
+
+    .section-padding {
+        padding: 60px 0px;
+    }
+
+    .water-ripple-img {
+        position: relative;
+        left: 0;
+        top: 99px;
+        width: 100%;
+    }
+
+    .nye-img {
+        width: 230px;
+    }
+
+    .fish {
+        width: 100px;
+        top: -76px;
+    }
+
+    #newsletterModal .modal-dialog {
+        width: 350px;
+    }
+
+    #footer .age {
+        text-align: center;
+        width: 100%;
+        margin: 0;
+    }
+
+    #footer .help {
+        margin: 0px 100px;
+    }
+    .section-title-item .section-title {
+        margin-top: 100px;
+        margin-bottom: 20px;
+    }
+
+    @keyframes animate {
+        0% {
+            transform: translateY(-50px);
+            bottom: 20%;
+            top: 0%;
+        }
+
+
+
+        100% {
+            transform: translateY(-130px);
+            /* bottom: 20%; */
+            top: 0;
+        }
+    }
+
+    @keyframes swim {
+        10% {
+            bottom: 14%;
+        }
+
+        20% {
+            bottom: 16%;
+        }
+
+        30% {
+            bottom: 11%;
+        }
+
+        40% {
+            bottom: 17%;
+        }
+
+        50% {
+            bottom: 16%;
+        }
+
+        60% {
+            bottom: 17%;
+        }
+
+        70% {
+            bottom: 15%;
+        }
+
+        80% {
+            bottom: 20%;
+        }
+
+        90% {
+            bottom: 13%;
+        }
+
+        100% {
+            left: 50%;
+        }
+    }
+
+    @keyframes swim1 {
+        10% {
+            bottom: 14%;
+        }
+
+        20% {
+            bottom: 16%;
+        }
+
+        30% {
+            bottom: 11%;
+        }
+
+        40% {
+            bottom: 17%;
+        }
+
+        50% {
+            bottom: 16%;
+        }
+
+        60% {
+            bottom: 17%;
+        }
+
+        70% {
+            bottom: 15%;
+        }
+
+        80% {
+            bottom: 20%;
+        }
+
+        90% {
+            bottom: 13%;
+        }
+
+        100% {
+            left: 15%;
+        }
+    }
+
+    /*--------------------------------------------------------------
+    # Casino bonus page
+    --------------------------------------------------------------*/
+    #casino-bonuse {
+        padding: 80px 0px 1px;
+    }
+
+    #casino-bonuse .top-banner {
+        height: 265px;
+    }
+
+    .banner-heading {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .banner-heading h4 {
+        font-size: 17px;
+    }
+
+    .first-casino-banner-logo {
+        margin-top: 10px;
+        margin-left: 13px;
+        margin-right: 13px;
+        text-align: center;
+    }
+
+    .second-casino-banner-logo {
+        margin-top: 10px;
+        margin-left: 13px;
+        margin-right: 13px;
+        text-align: center;
+    }
+
+    .first-casino-banner-logo img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .second-casino-banner-logo img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .casino-bonus {
+        text-align: center;
+    }
+
+    .casino-bonus .bonus-amount {
+        margin-left: 0;
+        font-size: 14px;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    #casino-bonus-content {
+        padding: 50px 0;
+    }
+
+    #casino-bonus-content .casino-jelly-img, #new-casino-content .casino-jelly-img {
+        width: 75px;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    #casino-bonus-content .casino-crab-img  {
+        width: 100px;
+    }
+    #casino-bonus-content h2
+    {
+        margin-bottom: 20px;
+    }
+    @keyframes animateCloud {
+        0% {
+            margin-left: -1000px;
+        }
+
+        100% {
+            margin-left: 20%;
+        }
+    }
+
+    @keyframes fly-right-one {
+        0% {
+            -webkit-transform: scale(0.3) translateX(-10vw);
+            transform: scale(0.3) translateX(-10vw);
+        }
+
+        100% {
+            -webkit-transform: translateY(0vh) translateX(80vw) scale(0.6);
+            transform: translateY(0vh) translateX(80vw) scale(0.6);
+        }
+    }
+
+    #new-casino {
+        padding: 80px 0 5px;
+    }
+
+    #new-casino-content {
+        padding: 10px 0 125px;
+    }
+
+    #news-section .select-search-bar {
+        width: 100%;
+        margin-top: 41px;
+    }
+
+    .news-tablet-view, .review-tablet-view, .faq-tablet-view, .game-tablet-view {
+        display: none;
+    }
+
+    #single-news-section .section-comment h2 {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    #review-section .top-banner {
+       height: 370px;
+    }
+    #review-section .casino-logo {
+        right: 50%;
+        transform: translateX(50%);
+        top: 20px;
+    }
+
+    #review-section .casino-logo img {
+        height: 100px;
+        width: 100px;
+    }
+    #review-section .casino-content {
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        top: 130px;
+    }
+    #review-section .casino-content h1
+    {
+        font-size: 15px;
+    }
+    #review-section .casino-rating {
+        margin-bottom: 0px;
+    }
+    #review-section .spins-amount
+    {
+        font-size: 14px;
+    }
+    #games-new-section .games-section-content {
+        padding: 30px 0px;
+    }
+    .vertical-filters span {
+        font-size: 14px;
+    }
+    .rtp-label {
+        font-size: 14px;
+    }
+    #single-game-section .single-game-content{
+        padding: 80px 0;
+    }
+    .single-game-table {
+        width: 100%;
+    }
+    .game-banner-content h1 {
+        font-size: 20px;
+    }
+    .game-top-banner .game-banner-content {
+        padding-top: 125px;
+    }
+    #single-game-section .game-top-banner {
+        height: 300px;
+    }
+    #games-new-section .game-top-banner {
+        height: 300px;
+    }
+    #review-section {
+        margin-top: 70px;
+        margin-bottom: 20px;
+    }
+    #news-section {
+        margin-top: 90px;
+        margin-bottom: 70px;
+    }
+    #single-news-section {
+        margin-top: 90px;
+        margin-bottom: 70px;
+    }
+    #general-section-page {
+        margin-top: 90px;
+        margin-bottom: 70px;
+    }
+    #faq-section
+    {
+        margin-top: 90px;
+        margin-bottom: 70px;
+    }
+    #faq-section h3 {
+        margin-bottom: 0px;
+    }
+    #privacy-section-page, #responsible-section-page, #terms-section-pagec, #site-map-section, #about-section-page
+    {
+        margin-top: 90px;
+        margin-bottom: 70px;
+    }
+    #new-casino-content .casino-tortoise-img {
+        width: 140px;
+    }
+    .filter-screen
+    {
+        display: none;
+    }
+    #filter-model
+    {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    #filterModal .modal-dialog
+    {
+        margin-top: 50px;
+    }
+    .game-screen-view .row
+    {
+        margin-bottom: 40px;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+    #slider-section {
+        position: relative;
+        padding-top: 29%;
+        transform: translate(0px, 71px);
+        z-index: 1;
+    }
+
+    #carouselContentMobile .carousel-item {
+        padding-top: 45px;
+    }
+
+    #carouselContentMobile .carousel-item p {
+        margin-bottom: 50px;
+        font-size: 10px;
+    }
+
+    #carouselContentMobile .casino-btn {
+        left: 30%;
+    }
+
+    .logo-icon-img {
+        width: 140px;
+    }
+
+    .about-div:before {
+        top: -1%;
+    }
+
+    #ripple-img {
+        left: -32%;
+    }
+
+    .diving {
+        width: 250px;
+    }
+
+    .octopus-two-img {
+        width: 110px;
+    }
+
+    .read-blog-btn {
+        width: 100%;
+    }
+    .rating-mobile .rating-mobile-area .rating-mobile-btn .btn-play{
+        padding: 22px 12px;
+    }
+    @keyframes swim {
+        10% {
+            bottom: 14%;
+        }
+
+        20% {
+            bottom: 16%;
+        }
+
+        30% {
+            bottom: 11%;
+        }
+
+        40% {
+            bottom: 17%;
+        }
+
+        50% {
+            bottom: 16%;
+        }
+
+        60% {
+            bottom: 17%;
+        }
+
+        70% {
+            bottom: 15%;
+        }
+
+        80% {
+            bottom: 20%;
+        }
+
+        90% {
+            bottom: 13%;
+        }
+
+        100% {
+            left: 80%;
+        }
+    }
+
+    @keyframes swim1 {
+        10% {
+            bottom: 14%;
+        }
+
+        20% {
+            bottom: 16%;
+        }
+
+        30% {
+            bottom: 11%;
+        }
+
+        40% {
+            bottom: 17%;
+        }
+
+        50% {
+            bottom: 16%;
+        }
+
+        60% {
+            bottom: 17%;
+        }
+
+        70% {
+            bottom: 15%;
+        }
+
+        80% {
+            bottom: 20%;
+        }
+
+        90% {
+            bottom: 13%;
+        }
+
+        100% {
+            left: 60%;
+        }
+    }
+    .banner-heading {
+        width: 100%;
+    }
+    .banner-heading h4 {
+        font-size: 11px;
+    }
+    .second-casino-banner-logo {
+        margin-left: 12px;
+        margin-right: 12px;
+        text-align: center;
+    }
+    #casino-bonuse .top-banner {
+        height: 275px;
+    }
+    #casino-bonuse .read-review {
+        margin-left: 2px;
+    }
+    .second-casino-banner-logo img
+    {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    .casino-bonus .bonus-amount {
+        font-size: 16px;
+        margin-left: 0px;
+    }
+    .casino-bonus
+    {
+        text-align: center;
+    }
+    .first-casino-banner-logo {
+        margin-left: 12px;
+        margin-right: 12px;
+        text-align: center;
+    }
+    .first-casino-banner-logo img
+    {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    #casino-bonus-content .casino-jelly-img {
+        width: 100%;
+    }
+    #casino-bonus-content .casino-crab-img {
+        width: 100%;
+    }
+    @keyframes animateCloud {
+        0% {
+            margin-left: -1000px;
+        }
+
+        100% {
+            margin-left: 55%;
+        }
+    }
+    #new-casino-content .casino-tortoise-img {
+        width: 100%;
+    }
+    #news-section .select-search-bar {
+        width: 240px;
+        display: inline-block;
+        margin-left: 49px;
+        margin-top: 0px;
+    }
+    #news-section .read-blog-btn
+    {
+        width: 100%;
+    }
+    .news-allscreen-view, .review-allscreen-view ,.faq-allscreen-view, .game-screen-view
+    {
+        display: none;
+    }
+    .casino-widget{
+        text-align: center;
+    }
+    #games-new-section .games-section-content
+    {
+        padding: 80px 0;
+    }
+    #single-game-section .single-game-content {
+        padding: 80px 0;
+    }
+    .single-game-table
+    {
+        width: 100%;
+    }
+    #single-game-section .game-top-banner {
+        height: 350px;
+    }
+    #games-new-section .game-top-banner {
+        height: 350px;
+    }
+    #review-section
+    {
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 980px) and (max-width: 1150px) {
+    .main-nav a {
+        font-size: 12px;
+    }
+
+    .main-nav a {
+        padding: 13px 15px;
+    }
+
+    .carousel-item {
+        padding: 0;
+    }
+
+    #carouselContent .carousel-item p {
+        font-size: 10px;
+    }
+
+    .table td img {
+        transform: translate(0%, 5%);
+    }
+
+    .casino-btn {
+        bottom: 0px;
+    }
+
+    .logo-icon-img {
+        width: 125px;
+    }
+
+    .octopus-two-img {
+        width: 130px;
+    }
+    .about-div:before {
+        top: -2%;
+    }
+
+    #footer .age {
+        width: calc(100px + 25vw);
+    }
+    .banner-heading {
+        width: 100%;
+    }
+    .banner-heading h4 {
+        font-size: 14px;
+    }
+    .first-casino-banner-logo
+    {
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+    .second-casino-banner-logo
+    {
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+    #casino-bonuse .read-review {
+        font-size: 14px;
+    }
+    .casino-bonus
+    {
+        text-align: center;
+    }
+    .casino-bonus .bonus-amount {
+        font-size: 16px;
+    }
+    @keyframes animateCloud {
+        0% {
+            margin-left: -1000px;
+        }
+
+        100% {
+            margin-left: 65%;
+        }
+    }
+    .news-allscreen-view, .review-allscreen-view , .faq-allscreen-view, .game-screen-view
+    {
+        display: none;
+    }
+    .casino-widget{
+        text-align: center;
+    }
+    #games-new-section .games-section-content
+    {
+        padding: 80px 0;
+    }
+    #single-game-section .single-game-content {
+        padding: 80px 0;
+    }
+    .single-game-table
+    {
+        width: 100%;
+    }
+    #single-game-section .game-top-banner {
+        height: 350px;
+    }
+    #games-new-section .game-top-banner {
+        height: 350px;
+    }
+}
+@media (min-width: 1100px) and (max-width: 1199px) {
+    .news-allscreen-view, .review-allscreen-view , .faq-allscreen-view, .game-screen-view, .filter-screen
+    {
+        display: none;
+    }
+    #games-new-section .games-section-content
+    {
+        padding: 80px 0;
+    }
+}
+@media (min-width: 1200px) {
+    .news-tablet-view,.review-tablet-view , .faq-tablet-view, .game-tablet-view,.filter-mobile
+    {
+        display: none;
+    }
+}

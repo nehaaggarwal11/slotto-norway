@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bal - Email Editor Documentation</title>
+    <meta name="description" lang="en" content="Bal – Email Newsletter Builder - This is a drag & drop email builder plugin based on Jquery and PHP for developer. You can simply integrate this script in your web project and create custom email template with drag & drop">
+    <meta name="keywords" lang="en" content="bounce, bulk mailer, campaign, campaign email, campaign monitor, drag & drop email builder, drag & drop email editor, mailchimp, mailer, newsletter, newsletter email, responsive, retina ready, subscriptions, templates">
+    <meta name="robots" content="index, follow">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        .buy-it {
+            border-left: 3px solid #181818;
+            border-right: 3px solid #181818;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="w0" class="navbar-inverse navbar-fixed-top navbar" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target="#w0-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button><a class="navbar-brand" href="./">Home</a>
+            </div>
+            <div id="w0-collapse" class="collapse navbar-collapse">
+                <ul id="w1" class="navbar-nav navbar-right nav">
+                    <li><a href="index.html">Example</a></li>
+                    <li class="active"><a href="documentation.html">Docs</a></li>
+                    <li><a class="buy-it" href="https://codecanyon.net/item/bal-email-newsletter-builder-php-version/18060733?ref=askerov" target="_blank">Get on codecanyon</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="site-index">
+
+            <div class="jumbotron">
+                <h1>Documentation</h1>
+
+                <p class="lead">This is may help you.</p>
+            </div>
+            <div class="body-content">
+                <h2 id="structure">With easy structure and different options,
+                   You can show your email builder</h2>
+                <pre><code>&lt;div class='your selector'>&lt;/div>
+                <br />
+$('.your selector').emailBuilder({
+  elementJsonUrl: 'elements.json',
+  langJsonUrl: 'lang.json',
+  lang: 'en',
+  loading_color1: '#3B7694',
+  loading_color2: '#09181F',
+  showLoading: true,
+
+  blankPageHtml: '',
+  loadPageHtml: '',
+
+  showContextMenu: true,
+  showContextMenu_FontFamily: true,
+  showContextMenu_FontSize: true,
+  showContextMenu_Bold: true,
+  showContextMenu_Italic: true,
+  showContextMenu_Underline: true,
+  showContextMenu_Strikethrough: true,
+  showContextMenu_Hyperlink: true,
+
+
+  showElementsTab: true,
+  showPropertyTab: true,
+  showCollapseMenu: true,
+  showBlankPageButton: true,
+  showCollapseMenuinBottom: true,
+
+
+  showSettingsBar: true,
+  showSettingsPreview: true,
+  showSettingsExport: true,
+  showSettingsSendMail: true,
+  showSettingsSave: true,
+  showSettingsLoadTemplate: true,
+  showMobileView: true,
+
+  showRowMoveButton: true,
+  showRowRemoveButton: true,
+  showRowDuplicateButton: true,
+  showRowCodeEditorButton: true,
+
+  onSettingsPreviewButtonClick: function(e) {},
+  onSettingsExportButtonClick: function(e) {},
+  onBeforeSettingsSaveButtonClick: function(e) {},
+  onSettingsSaveButtonClick: function(e) {},
+  onBeforeSettingsLoadTemplateButtonClick: function(e) {},
+  onSettingsSendMailButtonClick: function(e) {},
+
+
+  onBeforeChangeImageClick: function(e) {},
+  onBeforePopupSelectImageButtonClick: function(e) {},
+  onBeforePopupSelectTemplateButtonClick: function(e) {},
+  onPopupSaveButtonClick: function(e) {},
+  onPopupSendMailButtonClick: function(e) {},
+  onPopupUploadImageButtonClick: function(e) {},
+
+
+  onBeforeRowRemoveButtonClick: function(e) {},
+  onAfterRowRemoveButtonClick: function(e) {},
+
+  onBeforeRowDuplicateButtonClick: function(e) {},
+  onAfterRowDuplicateButtonClick: function(e) {},
+
+  onBeforeRowEditorButtonClick: function(e) {},
+  onAfterRowEditorButtonClick: function(e) {},
+
+  onBeforeShowingEditorPopup: function(e) {},
+  onAfterLoad:function(e) {}
+}});
+                    </code></pre>
+            </div>
+            <div class="body-content">
+
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Option</th>
+                            <th>Description</th>
+                            <th width="100px">Values</th>
+                            <th width="150px">Default</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>elementJsonUrl</td>
+                            <td>
+                                Json file directory include which elements want to show in email builder
+                            </td>
+                            <td>String</td>
+                            <td>elements.json</td>
+                        </tr>
+                        <tr>
+                            <td>langJsonUrl</td>
+                            <td>
+                                Json file directory include which languages supported.
+                                <br> If you want ,you can add any language very easily.
+                            </td>
+                            <td>String</td>
+                            <td>lang.json</td>
+                        </tr>
+                        <tr>
+                            <td>lang</td>
+                            <td>
+                                Change builder language .<b> en | fr | de | ru | tr </b>.
+
+                            </td>
+                            <td>String</td>
+                            <td>'en'</td>
+                        </tr>
+                        <tr>
+                            <td>loading_color1</td>
+                            <td>In the loading has 2 colors.This option change loading color 1 </td>
+                            <td>String</td>
+                            <td>#CA1C21</td>
+                        </tr>
+                        <tr>
+                            <td>loading_color2</td>
+                            <td>In the loading has 2 colors.This option change loading color 2 </td>
+                            <td>String</td>
+                            <td>#E7E7E7</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>showLoading</td>
+                            <td>You can show loading when page loading </td>
+                            <td>true | false</td>
+                            <td>true</td>
+                        </tr>
+                        <tr>
+                            <td>blankPageHtml</td>
+                            <td>Blank page html source. when users want to create blank page,they see this html </td>
+                            <td>String</td>
+                            <td>null</td>
+                        </tr>
+                        <tr>
+                            <td>loadPageHtml</td>
+                            <td>When page loading you can load your template from database or you can show any html into editor </td>
+                            <td>String</td>
+                            <td>null</td>
+                        </tr>
+                        <tr>
+                            <td>showContextMenu</td>
+                            <td>Show or hide context menu in editor </td>
+                            <td>true | false</td>
+                            <td>true</td>
+                        </tr>
+                        <tr>
+                            <td>showContextMenu_FontFamily</td>
+                            <td>Show or hide font family option context menu in editor </td>
+                            <td>true | false</td>
+                            <td>true</td>
+                        </tr>
+                        <tr>
+                            <td>showContextMenu_FontSize</td>
+                            <td>Show or hide font size option context menu in editor </td>
+                            <td>true | false</td>
+                            <td>true</td>
+                        </tr>
+                        <tr>
+                            <td>showContextMenu_Bold</td>
+                            <td>Show or hide bold option context menu in editor </td>
+                            <td>true | false</td>
+                            <td>true</td>
+                        </tr>
+                        <tr>
+                            <td>showContextMenu_Italic</td>
+                            <td>Show or hide italic option context menu in editor </td>
+                            <td>true | false</td>
+                            <td>true</td>
+                        </tr>
+                        <tr>
+                            <td>showContextMenu_Underline</td>
+                            <td>Show or hide underline option context menu in editor </td>
+                            <td>true | false</td>
+                            <td>true</td>
+                        </tr>
+                        <tr>
+                            <td>showContextMenu_Strikethrough</td>
+                            <td>Show or hide strikethrough option context menu in editor </td>
+                            <td>true | false</td>
+                            <td>true</td>
+                        </tr>
+                        <tr>
+                            <td>showContextMenu_Hyperlink</td>
+                            <td>Show or hide hyperlink option context menu in editor </td>
+                            <td>true | false</td>
+                            <td>true</td>
+                        </tr>
+
+                        <tr>
+                            <td>showElementsTab</td>
+                            <td>Show or hide elements tab in left menu </td>
+                            <td>true | false</td>
+                            <td>true</td>
+                        </tr>
+                        <tr>
+                            <td>showPropertyTab</td>
+                            <td>Show or hide property tab in left menu </td>
+                            <td>true | false</td>
+                            <td>true</td>
+                        </tr>
+                        <tr>
+                            <td>showCollapseMenu</td>
+                            <td>Show or hide 'collapse menu' button in left menu </td>
+                            <td>true | false</td>
+                            <td>true</td>
+                        </tr>
+                        <tr>
+                            <td>showBlankPageButton</td>
+                            <td>Show or hide 'blank page' button in left menu </td>
+                            <td>true | false</td>
+                            <td>true</td>
+                        </tr>
+                        <tr>
+                            <td>showCollapseMenuinBottom</td>
+                            <td>Show or hide 'collapse menu' button bottom or above </td>
+                            <td>true | false</td>
+                            <td>true</td>
+                        </tr>
+                        <tr>
+                            <td>showSettingsBar</td>
+                            <td>Show or hide settings bar </td>
+                            <td>true | false</td>
+                            <td>true</td>
+                        </tr>
+
+                        <tr>
+                            <td>showSettingsPreview</td>
+                            <td>Show or hide 'Preview' button in settings bar </td>
+                            <td>true | false</td>
+                            <td>true</td>
+                        </tr>
+                        <tr>
+                            <td>showSettingsExport</td>
+                            <td>Show or hide 'Export' button in settings bar </td>
+                            <td>true | false</td>
+                            <td>true</td>
+                        </tr>
+                        <tr>
+                            <td>showSettingsSendMail</td>
+                            <td>Show or hide 'Send Mail' button in settings bar </td>
+                            <td>true | false</td>
+                            <td>true</td>
+                        </tr>
+                        <tr>
+                            <td>showSettingsSave</td>
+                            <td>Show or hide 'Save' button in settings bar </td>
+                            <td>true | false</td>
+                            <td>true</td>
+                        </tr>
+                        <tr>
+                            <td>showSettingsLoadTemplate</td>
+                            <td>Show or hide 'Load Template' button in settings bar </td>
+                            <td>true | false</td>
+                            <td>true</td>
+                        </tr>
+                        <tr>
+                            <td>showMobileView</td>
+                            <td>Show or hide 'Mobile view' button in settings bar </td>
+                            <td>true | false</td>
+                            <td>true</td>
+                        </tr>
+                        <tr>
+                            <td>showRowMoveButton</td>
+                            <td>Show or hide 'Move' button in actions row item </td>
+                            <td>true | false</td>
+                            <td>true</td>
+                        </tr>
+                        <tr>
+                            <td>showRowRemoveButton</td>
+                            <td>Show or hide 'Remove' button in actions row item </td>
+                            <td>true | false</td>
+                            <td>true</td>
+                        </tr>
+                        <tr>
+                            <td>showRowDuplicateButton</td>
+                            <td>Show or hide 'Duplicate' button in actions row item </td>
+                            <td>true | false</td>
+                            <td>true</td>
+                        </tr>
+                        <tr>
+                            <td>showRowCodeEditorButton</td>
+                            <td>Show or hide 'Code Editor' button in actions row item </td>
+                            <td>true | false</td>
+                            <td>true</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>onSettingsPreviewButtonClick</td>
+                            <td>Settings preview button click event</td>
+                            <td>undefined</td>
+                            <td>function (e){}</td>
+                        </tr>
+                        <tr>
+                            <td>onSettingsExportButtonClick</td>
+                            <td>Settings export button click event</td>
+                            <td>undefined</td>
+                            <td>function (e){}</td>
+                        </tr>
+                        <tr>
+                            <td>onBeforeSettingsSaveButtonClick</td>
+                            <td>Settings before save button click event</td>
+                            <td>undefined</td>
+                            <td>function (e){}</td>
+                        </tr>
+                        <tr>
+                            <td>onSettingsSaveButtonClick</td>
+                            <td>Settings save button click event</td>
+                            <td>undefined</td>
+                            <td>function (e){}</td>
+                        </tr>
+                        <tr>
+                            <td>onBeforeSettingsLoadTemplateButtonClick</td>
+                            <td>Settings before load template button click event</td>
+                            <td>undefined</td>
+                            <td>function (e){}</td>
+                        </tr>
+                        <tr>
+                            <td>onSettingsSendMailButtonClick</td>
+                            <td>Settings send mail button click event</td>
+                            <td>undefined</td>
+                            <td>function (e){}</td>
+                        </tr>
+
+
+                        <tr>
+                            <td>onBeforeChangeImageClick</td>
+                            <td>Before 'change image' click event </td>
+                            <td>undefined</td>
+                            <td>function (e){}</td>
+                        </tr>
+                        <tr>
+                            <td>onBeforePopupSelectImageButtonClick</td>
+                            <td>Before save button click event in 'select image' popup </td>
+                            <td>undefined</td>
+                            <td>function (e){}</td>
+                        </tr>
+                        <tr>
+                            <td>onBeforePopupSelectTemplateButtonClick</td>
+                            <td>Before select template button click event in 'load template' popup</td>
+                            <td>undefined</td>
+                            <td>function (e){}</td>
+                        </tr>
+                        <tr>
+                            <td>onPopupSaveButtonClick</td>
+                            <td> Save button click event in 'Save template' popup </td>
+                            <td>undefined</td>
+                            <td>function (e){}</td>
+                        </tr>
+                        <tr>
+                            <td>onPopupSendMailButtonClick</td>
+                            <td>'Send Email' click event in 'Send Mail' popup</td>
+                            <td>undefined</td>
+                            <td>function (e){}</td>
+                        </tr>
+                        <tr>
+                            <td>onPopupUploadImageButtonClick</td>
+                            <td>'Upload' button click for upload image in 'select image' popup</td>
+                            <td>undefined</td>
+                            <td>function (e){}</td>
+                        </tr>
+
+                        <tr>
+                            <td>onBeforeRowRemoveButtonClick</td>
+                            <td>Before clicking 'Remove' button in element settings</td>
+                            <td>undefined</td>
+                            <td>function (e){}</td>
+                        </tr>
+                        <tr>
+                            <td>onAfterRowRemoveButtonClick</td>
+                            <td>After clicking 'Remove' button in element settings</td>
+                            <td>undefined</td>
+                            <td>function (e){}</td>
+                        </tr>
+
+                        <tr>
+                            <td>onBeforeRowDuplicateButtonClick</td>
+                            <td>Before clicking 'Duplicate' button in element settings</td>
+                            <td>undefined</td>
+                            <td>function (e){}</td>
+                        </tr>
+                        <tr>
+                            <td>onAfterRowDuplicateButtonClick</td>
+                            <td>After clicking 'Duplicate' button in element settings</td>
+                            <td>undefined</td>
+                            <td>function (e){}</td>
+                        </tr>
+
+                        <tr>
+                            <td>onBeforeRowEditorButtonClick</td>
+                            <td>Before clicking 'Code editor' button in element settings</td>
+                            <td>undefined</td>
+                            <td>function (e){}</td>
+                        </tr>
+                        <tr>
+                            <td>onAfterRowEditorButtonClick</td>
+                            <td>After clicking 'Code editor' button in element settings</td>
+                            <td>undefined</td>
+                            <td>function (e){}</td>
+                        </tr>
+
+                        <tr>
+                            <td>onBeforeShowingEditorPopup</td>
+                            <td>Before, show code editor for edit source any elemnt of template</td>
+                            <td>undefined</td>
+                            <td>function (e){}</td>
+                        </tr>
+                        <tr>
+                            <td>onAfterLoad</td>
+                            <td>After page loading event </td>
+                            <td>undefined</td>
+                            <td>function (e){}</td>
+                        </tr>
+                        <tr>
+                            <td>onElementDragStart</td>
+                            <td>When element drag start event </td>
+                            <td>undefined</td>
+                            <td>function (e){}</td>
+                        </tr>
+                        <tr>
+                            <td>onElementDragFinished</td>
+                            <td>Element drag finished event </td>
+                            <td>undefined</td>
+                            <td>function (e,contentHtml){}</td>
+                        </tr>
+                        <tr>
+                            <td>onTemplateDeleteButtonClick</td>
+                            <td>'Delete template' click event </td>
+                            <td>undefined</td>
+                            <td>function (e,dataId,parent){}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4>If you want to stop running function, you should use below code in <strong>before</strong> events</h4>
+                <pre><code>$('.bal-editor-demo').emailBuilder({
+  onBeforeRowDuplicateButtonClick: function(e) {
+      console.log('onBeforeRowDuplicateButtonClick html');
+      e.preventDefault(); // return false;
+  }
+});</code></pre>
+
+
+                <hr>
+                <h4>After declare below variable you can use API methods very easily</h4>
+                <pre><code>var  _builder= $('.bal-editor-demo').emailBuilder({ });</code></pre>
+
+
+                <h2 style="margin-top: 60px;">API Methods</h2>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th style="width: 220px;">Name</th>
+                            <th>Description</th>
+                            <th>Return</th>
+                            <th style="width: 400px;">Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>setElementJsonUrl(value)</td>
+                            <td>Set elements json file url, include which elements want to show in email builder </td>
+                            <td>undefined</td>
+                            <td>
+                                <pre><code>_builder.setElementJsonUrl('value');</code></pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>setLang(value)</td>
+                            <td>Chnage language builder (en | fr | de | ru | tr ). </td>
+                            <td>undefined</td>
+                            <td>
+                                <pre><code>_builder.setLang('value');</code></pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>setLangJsonUrl(value)</td>
+                            <td>Set json file url include which supported languages .If you want ,you can add any language very easily. </td>
+                            <td>undefined</td>
+                            <td>
+                                <pre><code>_builder.setLangJsonUrl('value');</code></pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>setBlankPageHtml(value)</td>
+                            <td>Set blank page html source. when users want to create blank page,they see this html </td>
+                            <td>undefined</td>
+                            <td>
+                                <pre><code>_builder.setBlankPageHtml('value');</code></pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>setLoadPageHtml(value)</td>
+                            <td>Set html when page loading you can load your template from database or you can show any html into editor </td>
+                            <td>undefined</td>
+                            <td>
+                                <pre><code>_builder.setLoadPageHtml('value');</code></pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>setShowContextMenu(value)</td>
+                            <td>Show or hide context menu in editor </td>
+                            <td>undefined</td>
+                            <td>
+                                <pre><code>_builder.setShowContextMenu('value');</code></pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>setShowContextMenu_FontFamily(value)</td>
+                            <td>Show or hide font family option context menu in editor </td>
+                            <td>undefined</td>
+                            <td>
+                                <pre><code>_builder.setShowContextMenu_FontFamily('value');</code></pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>setShowContextMenu_FontSize(value)</td>
+                            <td>Show or hide font size option context menu in editor </td>
+                            <td>undefined</td>
+                            <td>
+                                <pre><code>_builder.setShowContextMenu_FontSize('value');</code></pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>setShowContextMenu_Bold(value)</td>
+                            <td>Show or hide bold option context menu in editor </td>
+                            <td>undefined</td>
+                            <td>
+                                <pre><code>_builder.setShowContextMenu_Bold('value');</code></pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>setShowContextMenu_Italic(value)</td>
+                            <td>Show or hide italic option context menu in editor </td>
+                            <td>undefined</td>
+                            <td>
+                                <pre><code>_builder.setShowContextMenu_Italic('value');</code></pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>setShowContextMenu_Underline(value)</td>
+                            <td>Show or hide underline option context menu in editor </td>
+                            <td>undefined</td>
+                            <td>
+                                <pre><code>_builder.setShowContextMenu_Underline('value');</code></pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>setShowContextMenu_Strikethrough(value)</td>
+                            <td>Show or hide strikethrough option context menu in editor </td>
+                            <td>undefined</td>
+                            <td>
+                                <pre><code>_builder.setShowContextMenu_Strikethrough('value');</code></pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>setShowContextMenu_Hyperlink(value)</td>
+                            <td>Show or hide hyperlink option context menu in editor </td>
+                            <td>undefined</td>
+                            <td>
+                                <pre><code>_builder.setShowContextMenu_Hyperlink('value');</code></pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>setShowElementsTab(value)</td>
+                            <td>Show or hide elements tab in left menu </td>
+                            <td>undefined</td>
+                            <td>
+                                <pre><code>_builder.setShowElementsTab('value');</code></pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>setShowPropertyTab(value)</td>
+                            <td>Show or hide property tab in left menu </td>
+                            <td>undefined</td>
+                            <td>
+                                <pre><code>_builder.setShowPropertyTab('value');</code></pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>setShowCollapseMenu(value)</td>
+                            <td>Show or hide 'collapse menu' button in left menu </td>
+                            <td>undefined</td>
+                            <td>
+                                <pre><code>_builder.setShowCollapseMenu('value');</code></pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>setShowBlankPageButton(value)</td>
+                            <td>Show or hide 'blank page' button in left menu </td>
+                            <td>undefined</td>
+                            <td>
+                                <pre><code>_builder.setShowBlankPageButton('value');</code></pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>setShowCollapseMenuinBottom(value)</td>
+                            <td>Show or hide 'collapse menu' button bottom or above </td>
+                            <td>undefined</td>
+                            <td>
+                                <pre><code>_builder.setShowCollapseMenuinBottom('value');</code></pre>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>setShowSettingsBar(value)</td>
+                            <td>Set value show or hide settings bar </td>
+                            <td>undefined</td>
+                            <td>
+                                <pre><code>_builder.setShowSettingsBar('value');</code></pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>setShowSettingsPreview(value)</td>
+                            <td>Set value show or hide 'Preview' button in settings bar </td>
+                            <td>undefined</td>
+                            <td>
+                                <pre><code>_builder.setShowSettingsPreview('value');</code></pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>setShowSettingsExport(value)</td>
+                            <td>Set value show or hide 'Export' button in settings bar </td>
+                            <td>undefined</td>
+                            <td>
+                                <pre><code>_builder.setShowSettingsExport('value');</code></pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>setShowSettingsSendMail(value)</td>
+                            <td>Set value show or hide 'Send Mail' button in settings bar </td>
+                            <td>undefined</td>
+                            <td>
+                                <pre><code>_builder.setShowSettingsSendMail('value');</code></pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>setShowSettingsSave(value)</td>
+                            <td>Set value show or hide 'Save' button in settings bar </td>
+                            <td>undefined</td>
+                            <td>
+                                <pre><code>_builder.setShowSettingsSave('value');</code></pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>setShowSettingsLoadTemplate(value)</td>
+                            <td>Set value show or hide 'Load Template' button in settings bar </td>
+                            <td>undefined</td>
+                            <td>
+                                <pre><code>_builder.setShowSettingsLoadTemplate('value');</code></pre>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>setShowRowMoveButton(value)</td>
+                            <td>Set value show or hide 'Move' button in actions row item </td>
+                            <td>undefined</td>
+                            <td>
+                                <pre><code>_builder.setShowRowMoveButton('value');</code></pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>setShowRowRemoveButton(value)</td>
+                            <td>Set value show or hide 'Remove' button in actions row item </td>
+                            <td>undefined</td>
+                            <td>
+                                <pre><code>_builder.setShowRowRemoveButton('value');</code></pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>setShowRowDuplicateButton(value)</td>
+                            <td>Set value show or hide 'Duplicate' button in actions row item </td>
+                            <td>undefined</td>
+                            <td>
+                                <pre><code>_builder.setShowRowDuplicateButton('value');</code></pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>setShowRowCodeEditorButton(value)</td>
+                            <td>Set value show or hide 'Code Editor' button in actions row item </td>
+                            <td>undefined</td>
+                            <td>
+                                <pre><code>_builder.setShowRowCodeEditorButton('value');</code></pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>init()</td>
+                            <td>Init email builder any time </td>
+                            <td>undefined</td>
+                            <td>
+                                <pre><code>_builder.init();</code></pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>setSettingsPreviewButtonClick(function)</td>
+                            <td>Set settings preview button click event </td>
+                            <td>undefined</td>
+                            <td>
+                                <pre><code>_builder.setSettingsPreviewButtonClick(function);</code></pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>setSettingsExportButtonClick(function)</td>
+                            <td>Set Settings export button click event </td>
+                            <td>undefined</td>
+                            <td>
+                                <pre><code>_builder.setSettingsExportButtonClick(function);</code></pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>setBeforeSettingsSaveButtonClick(function)</td>
+                            <td>Set Settings before save button click event </td>
+                            <td>undefined</td>
+                            <td>
+                                <pre><code>_builder.setBeforeSettingsSaveButtonClick(function);</code></pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>setSettingsSaveButtonClick(function)</td>
+                            <td>Set Settings save button click event </td>
+                            <td>undefined</td>
+                            <td>
+                                <pre><code>_builder.setSettingsSaveButtonClick(function);</code></pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>setBeforeSettingsLoadTemplateButtonClick(function)</td>
+                            <td>Set Settings before load template button click event </td>
+                            <td>undefined</td>
+                            <td>
+                                <pre><code>_builder.setBeforeSettingsLoadTemplateButtonClick(function);</code></pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>setSettingsSendMailButtonClick(function)</td>
+                            <td>Set Settings send mail button click event </td>
+                            <td>undefined</td>
+                            <td>
+                                <pre><code>_builder.setSettingsSendMailButtonClick(function);</code></pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>setBeforeChangeImageClick(function)</td>
+                            <td>Set Before 'change image' click event </td>
+                            <td>undefined</td>
+                            <td>
+                                <pre><code>_builder.setBeforeChangeImageClick(function);</code></pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>setBeforePopupSelectImageButtonClick(function)</td>
+                            <td>Set Before save button click event in 'select image' popup </td>
+                            <td>undefined</td>
+                            <td>
+                                <pre><code>_builder.setBeforePopupSelectImageButtonClick(function);</code></pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>setPopupSaveButtonClick(function)</td>
+                            <td>Set Save button click event in 'Save template' popup </td>
+                            <td>undefined</td>
+                            <td>
+                                <pre><code>_builder.setPopupSaveButtonClick(function);</code></pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>setBeforePopupSelectTemplateButtonClick(function)</td>
+                            <td>Set Before select template button click event in 'load template' popup </td>
+                            <td>undefined</td>
+                            <td>
+                                <pre><code>_builder.setBeforePopupSelectTemplateButtonClick(function);</code></pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>setPopupUploadImageButtonClick(function)</td>
+                            <td>Set 'Upload' button click for upload image in 'select image' popup </td>
+                            <td>undefined</td>
+                            <td>
+                                <pre><code>_builder.setPopupUploadImageButtonClick(function);</code></pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>setBeforeRowRemoveButtonClick(function)</td>
+                            <td>Set Before clicking 'Remove' button in element settings </td>
+                            <td>undefined</td>
+                            <td>
+                                <pre><code>_builder.setBeforeRowRemoveButtonClick(function);</code></pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>setAfterRowRemoveButtonClick(function)</td>
+                            <td>Set After clicking 'Remove' button in element settings </td>
+                            <td>undefined</td>
+                            <td>
+                                <pre><code>_builder.setAfterRowRemoveButtonClick(function);</code></pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>setBeforeRowDuplicateButtonClick(function)</td>
+                            <td>Set Before clicking 'Duplicate' button in element settings </td>
+                            <td>undefined</td>
+                            <td>
+                                <pre><code>_builder.setBeforeRowDuplicateButtonClick(function);</code></pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>setAfterRowDuplicateButtonClick(function)</td>
+                            <td>Set After clicking 'Duplicate' button in element settings </td>
+                            <td>undefined</td>
+                            <td>
+                                <pre><code>_builder.setAfterRowDuplicateButtonClick(function);</code></pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>setBeforeRowEditorButtonClick(function)</td>
+                            <td>Set Before clicking 'Code editor' button in element settings </td>
+                            <td>undefined</td>
+                            <td>
+                                <pre><code>_builder.setBeforeRowEditorButtonClick(function);</code></pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>setAfterRowEditorButtonClick(function)</td>
+                            <td>Set After clicking 'Code editor' button in element settings </td>
+                            <td>undefined</td>
+                            <td>
+                                <pre><code>_builder.setAfterRowEditorButtonClick(function);</code></pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>setBeforeShowingEditorPopup(function)</td>
+                            <td>Set Before, show code editor for edit source any elemnt of template </td>
+                            <td>undefined</td>
+                            <td>
+                                <pre><code>_builder.setBeforeShowingEditorPopup(function);</code></pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>setAfterLoad(function)</td>
+                            <td>Set After page loading event </td>
+                            <td>undefined</td>
+                            <td>
+                                <pre><code>_builder.setAfterLoad(function);</code></pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>getContentHtml()</td>
+                            <td>Get created email template </td>
+                            <td>Html</td>
+                            <td>
+                                <pre><code>_builder.getContentHtml();</code></pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>makeSortable()</td>
+                            <td>After loading html ,you can call this function for make drag drop </td>
+                            <td>undefined</td>
+                            <td>
+                                <pre><code>_builder.makeSortable();</code></pre>
+                            </td>
+                        </tr>
+                </table>
+                <hr>
+                <h4>Example API Methods</h4>
+                <p>Firstly you should declare below variable for use API Methods,after this you can call any method very easily</p>
+                <br>
+                <pre><code>var  _builder= $('.bal-editor-demo').emailBuilder();</code></pre>
+                <br>
+                <h5>Example : getContentHtml</h5>
+                <pre><code>_builder.getContentHtml();
+</code></pre>
+                <br>
+
+                <h5>Example : setAfterLoad</h5>
+                <pre><code>_builder.setAfterLoad(function(){
+  console.log('setAfterLoad function');
+});
+</code></pre>
+
+                <h5>Example : makeSortable</h5>
+                <pre><code>_builder.makeSortable();</code></pre>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="pull-left"><a href="https://codecanyon.net/user/askerov?ref=askerov">askerov</a> &copy; 2016</p>
+        </div>
+    </footer>
+    <script src="assets/js/jquery-3.1.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+></script>
+</body>
+
+</html>
+></script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+body {
+  background-color: #E9EAEA;
+}
+#btn-login{
+  background-color: #263845;
+}
+
+.panel-heading{
+  background-color: #1C2A33 !important;
+  color:#fff !important;
+  border-color:#1C2A33  !important;
+}
+.panel-info{
+    border-color:#1C2A33  !important;
+}
+.input-group-addon{
+  color:#fff;
+  background-color: #263845;
+  border-color:#1C2A33  !important;
+}
+.form-control{
+    border-color:#1C2A33  !important;
+}

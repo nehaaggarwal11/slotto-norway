@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /en/admin/
+Sitemap: https://www.slottomat.com/sitemap.xml
+Disallow: /no/admin/
+Sitemap: https://www.slottomat.com/no/sitemap.xml
+Disallow: /en/login/
+Disallow: /no/login/

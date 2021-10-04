@@ -1,0 +1,55 @@
+.casino-review-tab p {color: #555555;font-size: 14px;line-height: 30px;}
+/*.casino-bonus .bonus-amount {margin-left: 15px;}*/
+.casino-list .casino-img {margin-right: 10px;}
+.main-nav .drop-down ul{right: 0;left: unset;}
+.casino-review-tab * {text-align: left;}
+.casino-review-tab *, .popular-casino h6{color: #555555;}
+.casino-review-tab h4 {margin-top: 30px;margin-bottom: 0;font-weight: 600;}
+a.splbtns, button.splbtns, input.splbtns {
+    display: inline-block;
+    padding: 0 55px;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    position: relative;
+    border: none;
+    font-weight: 500;
+    box-shadow: 0 0 15px #191919!important;
+    border-radius: 0;
+    -webkit-text-stroke: 1.3px #fff;
+    letter-spacing: 2px;
+    width: auto;
+}
+a.splbtns:after, a.splbtns:before, button.splbtns:after, button.splbtns:before, input.splbtns:after, input.splbtns:before {
+    background-image: url(/asset/frontend/img/slot/button-bg.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    content: attr(data-text);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    height: 100%;
+    text-align: center;
+    transition: all .3s linear;
+}
+a.splbtns:after, button.splbtns:after, input.splbtns:after {
+    background-color: #da1f15;
+    transform-origin: top;
+    transform: translateY(0) rotateX(0);
+}
+a.splbtns:before, button.splbtns:before, input.splbtns:before {
+    background-color: #ca0a00;
+    transform-origin: bottom;
+    transform: translateY(-100%) rotateX(90deg);
+}
+a.splbtns:hover:before, button.splbtns:hover:before {
+    transform: translateY(0) rotateX(0);
+}
+a.splbtns:hover:after, button.splbtns:hover:after {
+    transform: translateY(100%) rotateX(90deg);
+}

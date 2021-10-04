@@ -1,0 +1,690 @@
+@font-face {
+    font-family: montserrat;
+    src: url('../fonts/montserrat/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: norwester;
+    src: url('../fonts/norwester/norwester.otf');
+}
+
+body {
+    color: #444;
+    font-family: "Montserrat-Regular", sans-serif;
+    background: #f9c862;
+
+}
+
+a {
+    color: #1bb1dc;
+    transition: 0.5s;
+}
+
+a:hover,
+a:active,
+a:focus {
+    color: #0a98c0;
+    outline: none;
+    text-decoration: none;
+}
+
+p {
+    padding: 0;
+    margin: 0 0 30px 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    margin: 0 0 20px 0;
+    padding: 0;
+}
+
+/* Back to top button */
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    background: #1bb1dc;
+    color: #fff;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    line-height: 1;
+    font-size: 16px;
+    border-radius: 50%;
+    right: 15px;
+    bottom: 15px;
+    transition: background 0.5s;
+    z-index: 11;
+}
+
+.back-to-top i {
+    padding-top: 12px;
+    color: #fff;
+}
+
+/* Prelaoder */
+
+#preloader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 9999;
+    background-size: 50px 50px;
+    -webkit-animation: zoomin 2s;
+    background: url(../img/logo/logo2.png) center no-repeat #da1f15;
+
+}
+@-webkit-keyframes zoomin {
+    0% {
+        -webkit-transform: scale(1);
+        background-size: 100px;
+    }
+    100% {
+        -webkit-transform: scale(1.5);
+        background-size: 100px;
+    }
+
+}
+
+/* #preloader:before {
+  content: "";
+  position: fixed;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  border: 6px solid #f2f2f2;
+  border-top: 6px solid #1bb1dc;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: animate-preloader 1s linear infinite;
+  animation: animate-preloader 1s linear infinite;
+} */
+
+@-webkit-keyframes animate-preloader {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate-preloader {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+/*----------header------------*/
+#header {
+    height: 50px;
+    transition: all 0.5s;
+    z-index: 997;
+    transition: all 0.5s;
+    padding: 20px 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    transition: all 0.5s;
+    z-index: 997;
+    background: #da1f15;
+}
+
+#svgelem {
+    position: absolute;
+    left: 39%;
+    -webkit-transform: translateX(-20%);
+    -ms-transform: translateX(-20%);
+    transform: translateX(-20%);
+    z-index: -1;
+    top: 0;
+}
+
+.landing-logo-img {
+    margin-top: -16px;
+}
+
+/*--------------video------------*/
+#myVideoDesktop {
+    position: sticky;
+    top: 50px;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+}
+#myVideoMobile
+{
+    position: absolute;
+    right: 0;
+    bottom: 87px;
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+}
+
+/*-----coin-box----------*/
+.coin-box
+{
+    position: absolute;
+    right: 20%;
+    bottom: 15%;
+}
+.coin-box .boxgif
+{
+    width: 100%;
+    max-width: 200px;
+}
+.coins
+{
+    position: absolute;
+    right: 20%;
+    bottom: 15%;
+}
+.coins .coin-img
+{
+    width: 100%;
+    max-width: 150px;
+}
+.casino-board
+{
+    position: absolute;
+    right: 43%;
+    left: 44%;
+    bottom: 17%;
+}
+.casino-board img{
+    width: 100%;
+    max-width: 100%;
+}
+.casino-board-link{
+    position: absolute;
+    right: 45%;
+    bottom: 30%;
+    left: 46%;
+    text-align: center;
+}
+.casino-board-link a{
+    font-size: 1.5vw;
+    color: #663300;
+    font-weight: 700;
+    text-align: center;
+    font-family: 'norwester', sans-serif;
+}
+.casino-board-link a span
+{
+    display: flex;
+}
+.casino-board-link .arrow-img
+{
+    width: 25px;
+    max-width: 25px;
+    position: relative;
+    bottom: 20px;
+}
+.casino-board-mobile
+{
+    position: absolute;
+    right: 20%;
+    left: 42%;
+    bottom: 25%;
+}
+.casino-board-mobile img{
+    width: 100%;
+    max-width: 100%;
+}
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+
+/* Desktop Navigation */
+
+.main-nav {
+    position: absolute;
+    right: 160px;
+    top: 0;
+}
+
+.main-nav,
+.main-nav * {
+    margin-top: 1px;
+    padding: 0;
+    list-style: none;
+}
+
+.main-nav-first {
+    position: absolute;
+    left: 160px;
+    top: 0;
+}
+
+.main-nav > ul > li {
+    position: relative;
+    white-space: nowrap;
+    float: left;
+}
+
+.main-nav a {
+    display: block;
+    position: relative;
+    color: #fff;
+    padding: 10px 15px;
+    transition: 0.3s;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.main-nav a:hover,
+.main-nav .active > a,
+.main-nav li:hover > a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.main-nav .drop-down ul {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: calc(100% - 30px);
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    padding: 10px 0;
+    background: #fff;
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    transition: ease all 0.3s;
+}
+
+.main-nav .drop-down:hover > ul {
+    opacity: 1;
+    top: 100%;
+    visibility: visible;
+}
+
+.main-nav .drop-down li {
+    min-width: 180px;
+    position: relative;
+}
+
+.main-nav .drop-down ul a {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: none;
+    color: #da2015;
+}
+
+.main-nav .drop-down ul a:hover,
+.main-nav .drop-down ul .active > a,
+.main-nav .drop-down ul li:hover > a {
+    color: #1c4184;
+}
+
+.main-nav .drop-down > a:after {
+    content: "\f107";
+    font-family: FontAwesome;
+    padding-left: 10px;
+}
+
+.main-nav .drop-down .drop-down ul {
+    top: 0;
+    left: calc(100% - 30px);
+}
+
+.main-nav .drop-down .drop-down:hover > ul {
+    opacity: 1;
+    top: 0;
+    left: 100%;
+}
+
+.main-nav .drop-down .drop-down > a {
+    padding-right: 35px;
+}
+
+.main-nav .drop-down .drop-down > a:after {
+    content: "\f105";
+    position: absolute;
+    right: 15px;
+}
+
+/* Mobile Navigation */
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 9999;
+    overflow-y: auto;
+    left: -260px;
+    width: 260px;
+    padding-top: 18px;
+    background: rgba(40, 38, 70, 0.8);
+    transition: 0.4s;
+}
+
+.mobile-nav * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.mobile-nav a {
+    display: block;
+    position: relative;
+    color: #fff;
+    padding: 10px 20px;
+    font-weight: 500;
+}
+
+.mobile-nav a:hover,
+.mobile-nav .active > a,
+.mobile-nav li:hover > a {
+    color: #8dc2fa;
+    text-decoration: none;
+}
+
+.mobile-nav .drop-down > a:after {
+    content: "\f078";
+    font-family: FontAwesome;
+    padding-left: 10px;
+    position: absolute;
+    right: 15px;
+}
+
+.mobile-nav .active.drop-down > a:after {
+    content: "\f077";
+}
+
+.mobile-nav .drop-down > a {
+    padding-right: 35px;
+}
+
+.mobile-nav .drop-down ul {
+    display: none;
+    overflow: hidden;
+}
+
+.mobile-nav .drop-down li {
+    padding-left: 20px;
+}
+
+.mobile-nav-toggle {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 9998;
+    border: 0;
+    background: none;
+    font-size: 24px;
+    transition: all 0.4s;
+    outline: none !important;
+    line-height: 1;
+    cursor: pointer;
+    text-align: right;
+}
+
+.mobile-nav-toggle i {
+    margin: 18px 18px 0 0;
+    color: #065e77;
+}
+
+.mobile-nav-overly {
+    width: 100%;
+    height: 100%;
+    z-index: 9997;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: rgba(40, 38, 70, 0.8);
+    overflow: hidden;
+    display: none;
+}
+
+.mobile-nav-active {
+    overflow: hidden;
+}
+
+.mobile-nav-active .mobile-nav {
+    left: 0;
+}
+
+.mobile-nav-active .mobile-nav-toggle i {
+    color: #fff;
+}
+
+.playgif {
+    animation-iteration-count: 1;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+    background: #004085;
+    padding: 0;
+    color: #fff;
+    font-size: 14px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  #footer .footer-top {
+    padding: 15px 0 10px 0;
+  }
+
+
+  #footer .footer-top .footer-links {
+    margin-bottom: 30px;
+  }
+
+  #footer .footer-top .footer-links ul {
+    list-style: none;
+    padding: 20px 20px 0 0;
+    margin: 0;
+    text-align: right;
+    float: left;
+  }
+
+  #footer .footer-top .footer-links ul li {
+    padding: 0 20px 15px 0;
+    display: inline;
+  }
+
+  #footer .footer-top .footer-links ul a {
+    color: #fff;
+    transition: 0.3s;
+  }
+
+  #footer .footer-top .footer-links ul a:hover {
+    color: #da1f15;
+  }
+  #multisite_selector_msddHolder {
+    float: right;
+  }
+  #multisite_selector_msdd{
+      top: 10px;
+  }
+  #footer .footer-top .copyright {
+    text-align: left;
+    font-size: 15px;
+    padding-top: 19px;
+  }
+  #footer .footer-info .age-logo
+  {
+      float: left;
+      margin-right: 15px;
+  }
+  #footer .footer-info .age-logo-mobile
+  {
+      float: left;
+  }
+
+
+/*------------media queries-----------------*/
+
+@media only screen and (max-width: 767px) {
+    #svgelem {
+        position: absolute;
+        left: 43%;
+        -webkit-transform: translateX(-20%);
+        -ms-transform: translateX(-20%);
+        transform: translateX(-20%);
+        z-index: -1;
+        top: 0;
+    }
+    #footer .footer-top .footer-links {
+        margin-bottom: 0;
+        position: relative;
+    }
+    #footer .footer-top .footer-links ul {
+        list-style: none;
+        padding: 4px 20px 0 0;
+        margin: 0;
+        text-align: left;
+        width: 400px;
+    }
+
+    #footer .footer-top .copyright {
+        text-align: left;
+        font-size: 12px;
+    }
+
+    .casino-board-link {
+        position: absolute;
+        right: 24%;
+        bottom: 34%;
+        text-align: center;
+    }
+    .casino-board-link a {
+        font-size: 14px;
+    }
+
+    .casino-board-link .arrow-img {
+        width: 20px;
+        max-width: 20px;
+        position: relative;
+        bottom: 20px;
+    }
+
+    .desktop-video-section
+    {
+        display: none;
+    }
+    .mobile-video-section
+    {
+        display: block;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+
+    .casino-board-link {
+        position: absolute;
+        right: 24%;
+        bottom: 41%;
+        left: 49%;
+        text-align: center;
+    }
+    .desktop-video-section
+    {
+        display: none;
+    }
+    .mobile-video-section
+    {
+        display: block;
+    }
+    .casino-board-link a {
+        font-size: 30px;
+    }
+    #footer .footer-top .footer-links ul {
+        text-align: left;
+        width: 400px;
+    }
+}
+
+@media (min-width: 980px) and (max-width: 1150px) {
+    .casino-board-link {
+        position: absolute;
+        right: 27%;
+        bottom: 36%;
+        left: 49%;
+        text-align: center;
+    }
+    .casino-board-mobile {
+        bottom: 18%;
+    }
+    .desktop-video-section
+    {
+        display: none;
+    }
+    .mobile-video-section
+    {
+        display: block;
+    }
+    .casino-board-link a {
+        font-size: 40px;
+    }
+    .casino-board-link .arrow-img {
+        width: 30px;
+        max-width: 30px;
+    }
+    #footer .footer-top .footer-links ul {
+        text-align: left;
+        width: 540px;
+    }
+    #footer .footer-top .footer-links ul li{
+        font-size: 21px;
+    }
+    #footer .footer-top .copyright {
+        font-size: 21px;
+    }
+    #footer .footer-info .age-logo
+    {
+        padding-top: 19px;
+    }
+}
+@media (min-width: 1151px) and (max-width: 1199px) {
+    .desktop-video-section
+    {
+        display: none;
+    }
+    .mobile-video-section
+    {
+        display: block;
+    }
+}
+@media (min-width: 1200px) {
+    .desktop-video-section
+    {
+        display: block;
+    }
+    .mobile-video-section
+    {
+        display: none;
+    }
+
+}
